@@ -14,7 +14,8 @@ return array(
 	),
 	
 	'45.55.10.201' => array(
-		'siteUrl' => 'http://45.55.10.201'
+		'siteUrl' => 'http://45.55.10.201',
+		'enableCsrfProtection' => true
 	),
 
 	'zdfs.dev' => array(
