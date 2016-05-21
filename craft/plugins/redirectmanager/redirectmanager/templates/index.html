@@ -1,0 +1,51 @@
+{% extends "_layouts/cp" %}
+{% set centered = true %}
+{% set title = "Redirect Manager"|t %}
+
+{% set redirects = craft.redirectManager.getAllRedirects %}
+
+{% set content %}
+
+	<p id="noredirects"{% if redirects|length %} class="hidden"{% endif %}>
+		{{ "No redirects exist yet."|t }}
+	</p>
+
+	{% if redirects|length %}
+		<div class="tableview">
+			<table id="redirects" class="data fullwidth">
+				<thead>
+					<th scope="col">{{ "URI to Match"|t }}</th>
+					<th scope="col">{{ "Redirect To"|t }}</th>
+					<th scope="col">{{ "Type"|t }}</th>
+					<th class="thin right"></th>
+				</thead>
+				<tbody>
+
+					{% for redirect in redirects %}
+						<tr data-id="{{ redirect.id }}" data-name="{{ redirect.uri }}">
+							<td><a href="{{ url('redirectmanager/'~redirect.id) }}">{{ redirect.uri }}</a></td>
+							<td>{{ redirect.location }}</td>
+							<td>{{ redirect.type }}</td>
+							<td class="rightalign"><a class="delete icon" title="{{ 'Delete'|t }}"></a></td>
+						</tr>
+					{% endfor %}
+
+				</tbody>
+			</table>
+		</div>
+	{% endif %}
+	
+	<div class="buttons">
+		<a href="{{ url('redirectmanager/new') }}" class="btn add icon">{{ "New Redirect"|t }}</a>
+	</div>
+
+{% endset %}
+
+{% set js %}
+	new Craft.AdminTable({
+		tableSelector: '#redirects',
+		noObjectsSelector: '#noredirects',
+		deleteAction: 'redirectManager/deleteRedirect'
+	});
+{% endset %}
+{% includeJs js %}
