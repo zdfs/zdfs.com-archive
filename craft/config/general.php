@@ -8,5 +8,16 @@
  */
 
 return array(
+	
+	'*' => array(),
+	
+	'45.55.10.201' => array(
+		'siteUrl' => 'http://45.55.10.201'   
+	),
+
+	'zdfs.dev' => array(
+		'devMode' => true,
+		'useCompressedJs' => false
+	)
 
 );
