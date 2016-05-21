@@ -4,3 +4,4 @@ craft/config/db.php
 node_modules
 .sass-cache
 .vscode
+.idea
