@@ -1,0 +1,43 @@
+{% extends "_layout" %}
+
+{% block content %}
+
+	{% set urlparams = craft.request.getSegments() %}
+
+	<div class="row align-center">
+		<div class="columns small-12 medium-10">
+
+			{% set writeItems = craft.entries.section('write') %}
+
+			{% set entry = writeItems.slug(urlparams[4]).first() %}
+			{% set params = craft.entries.section('write') %}
+
+			{% set prevEntry = entry.getPrev(params) %}
+			{% set nextEntry = entry.getNext(params) %}
+
+			{% if prevEntry or nextEntry %}
+				<ul class="menu expanded whats-new">
+					{% if prevEntry %}<li><a href="{{ prevEntry.url }}" aria-label="Previous post">&laquo; Previous post</a></li>{% endif %}
+					{% if nextEntry %}<li class="nav-right"><a href="{{ nextEntry.url }}" aria-label="Next post">Next post &raquo;</a></li>{% endif %}
+				</ul>
+			{% endif %}
+
+			<article class="whats-new">
+
+				<div class="article-content">
+					<h2>{{ entry.title }}</h2>
+
+					{% include '_includes/contentBlocks/blocks.twig' with {
+						blocks: entry.contentBlocks
+					} %}
+
+					<div class="columns text-right">
+						<time datetime="{{ entry.postDate }}">{{ entry.postDate.format('M d, Y') }}</time>
+					</div>
+				</div>
+			</article>
+
+		</div>
+	</div>
+
+{% endblock %}

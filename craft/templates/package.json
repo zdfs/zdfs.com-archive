@@ -1,0 +1,23 @@
+{
+  "name": "zdfs.com",
+  "version": "1.0.0",
+  "description": "The personal site of Zachary Forrest y Salazar",
+  "main": "",
+  "dependencies": {},
+  "devDependencies": {
+    "foundation-sites": "6.2.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zdfs/zdfs.com.git"
+  },
+  "author": "Zachary Forrest y Salazar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zdfs/zdfs.com/issues"
+  },
+  "homepage": "https://github.com/zdfs/zdfs.com#readme"
+}
