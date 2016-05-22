@@ -16,6 +16,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title>
 		<link rel="home" href="{{ siteUrl }}"/>
+		{{ craft.minimee.css([
+				'/styles/zdfs.css',
+			])
+		}}
 	</head>
 	<body class="no-js">
 		<div id="container">
