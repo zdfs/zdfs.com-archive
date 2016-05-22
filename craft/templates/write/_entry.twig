@@ -1,47 +1,34 @@
 {% extends "_layout" %}
 
 {% block stylesheets %}
-	{{ craft.minimee.css(['/styles/h-entry.css']) }}
+  <link rel="stylesheet" href="/styles/min/h-entry.css" />
 {% endblock %}
 
+{% set urlparams = craft.request.getSegments() %}
+{% set writeItems = craft.entries.section('write') %}
+{% set entry = writeItems.slug(urlparams[4]).first() %}
+{% set params = craft.entries.section('write') %}
+{% set prevEntry = entry.getPrev(params) %}
+{% set nextEntry = entry.getNext(params) %}
+
 {% block content %}
-
-	{% set urlparams = craft.request.getSegments() %}
-
-	<div class="row">
-		<div class="columns">
-
-			{% set writeItems = craft.entries.section('write') %}
-
-			{% set entry = writeItems.slug(urlparams[4]).first() %}
-			{% set params = craft.entries.section('write') %}
-
-			{% set prevEntry = entry.getPrev(params) %}
-			{% set nextEntry = entry.getNext(params) %}
-
-			{% if prevEntry or nextEntry %}
-				<ul class="menu expanded">
-					{% if prevEntry %}<li><a href="{{ prevEntry.url }}" aria-label="Previous post">&laquo; Previous post</a></li>{% endif %}
-					{% if nextEntry %}<li class="nav-right"><a href="{{ nextEntry.url }}" aria-label="Next post">Next post &raquo;</a></li>{% endif %}
-				</ul>
-			{% endif %}
-
-			<article class="h-entry">
-
-				<div class="article-content">
-					<h2 class="p-name">{{ entry.title }}</h2>
-
-					{% include '_includes/contentBlocks/blocks.twig' with {
-						blocks: entry.contentBlocks
-					} %}
-
-					<div class="columns text-right">
-						<time class="dt-published" datetime="{{ entry.postDate }}">{{ entry.postDate.format('M d, Y') }}</time>
-					</div>
-				</div>
-			</article>
-
-		</div>
-	</div>
-
+        <div class="row">
+          <div class="columns">
+  {% if prevEntry or nextEntry %}
+            <ul class="menu expanded">
+    {% if prevEntry %}<li><a href="{{ prevEntry.url }}" aria-label="Previous post">&laquo; Previous post</a></li>{% endif %}
+    {% if nextEntry %}<li class="nav-right"><a href="{{ nextEntry.url }}" aria-label="Next post">Next post &raquo;</a></li>{% endif %}
+            </ul>
+  {% endif %}
+            <article class="h-entry">
+              <div class="article-content">
+                <h2 class="p-name">{{ entry.title }}</h2>
+  {% include '_includes/contentBlocks/blocks.twig' with { blocks: entry.contentBlocks } %}
+                <div class="columns text-right">
+                  <time class="dt-published" datetime="{{ entry.postDate }}">{{ entry.postDate.format('M d, Y') }}</time>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
 {% endblock %}

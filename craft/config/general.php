@@ -19,8 +19,7 @@ return array(
 	),
 
 	'zdfs.dev' => array(
-		'devMode' => true,
-		'useCompressedJs' => false
+
 	)
 
 );

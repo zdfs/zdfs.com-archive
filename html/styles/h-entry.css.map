@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAAA,oBAAqB;EACnB,OAAO,EAAE,CAAC;EACV,SAAS,EAAE,iBAAiB;EAC5B,aAAa,EAAE,iBAAiB;EAChC,iBAAiB,EAAE,iBAAiB;;AAGtC,QAAS;EACP,OAAO,EAAE,CAAC;EACV,SAAS,EAAE,aAAa;EACxB,aAAa,EAAE,aAAa;EAC5B,iBAAiB,EAAE,aAAa;EAChC,UAAU,EAAE,kDAAkD;EAC9D,kBAAkB,EAAE,0DAA0D",
-"sources": ["../scss/h-entry.scss"],
-"names": [],
-"file": "h-entry.css"
-}

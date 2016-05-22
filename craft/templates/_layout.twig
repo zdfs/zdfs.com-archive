@@ -8,38 +8,29 @@
  # See Twig’s Template Inheritance documentation for more details:
  # http://twig.sensiolabs.org/doc/templates.html#template-inheritance
  #}
-
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title>
-		<link rel="home" href="{{ siteUrl }}"/>
-		{{ craft.minimee.css(['/styles/zdfs.css']) }}
-{% block stylesheets %}
-
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title>
+  <link rel="home" href="{{ siteUrl }}"/>
+  <link rel="stylesheet" href="/styles/min/layout.css" />
+{% block stylesheets %}{% endblock %}
+</head>
+<body class="no-js">
+  <div class="off-canvas-wrapper">
+    <div class="off-canvas-wrapper-inner row" data-off-canvas-wrapper>
+      {% include '_includes/common/menu.twig' %}
+      <main id="content" role="main" class="off-canvas-content" data-off-canvas-content>
+{% block content %}
+          <p>If you see me, you haven’t set your <code>{% verbatim %}{% block content %}…{% endblock %}{% endverbatim %}</code> yet.</p>
+          <p>See Twig’s <a href="http://twig.sensiolabs.org/doc/templates.html#template-inheritance">Template Inheritance</a> documentation for an explanation.</p>
 {% endblock %}
-	</head>
-	<body class="no-js">
-		<div id="container">
-
-			{#{% include '_includes/common/top-bar.twig' %}#}
-
-			<main id="content" role="main">
-				{% block content %}
-					<p>If you see me, you haven’t set your <code>{% verbatim %}{% block content %}…{% endblock %}{% endverbatim %}</code> yet.</p>
-					<p>See Twig’s <a href="http://twig.sensiolabs.org/doc/templates.html#template-inheritance">Template Inheritance</a> documentation for an explanation.</p>
-				{% endblock %}
-			</main>
-
-			{{ craft.minimee.js([
-					'/scripts/typekit.js',
-				])
-			}}
-
-			{#{% include '_includes/common/footer.twig' %}#}
-
-		</div>
-	</body>
+      </main>
+    </div>
+  </div>
+  {% includeJsFile "/scripts/min/common.js" %}
+{% block scripts %}{% endblock %}
+</body>
 </html>

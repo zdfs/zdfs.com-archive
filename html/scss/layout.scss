@@ -1,0 +1,35 @@
+// Sass utilities
+@import '../../node_modules/foundation-sites/scss/util/util';
+
+// Global variables and styles
+@import 'global';
+
+// Project settings
+@import 'settings';
+
+// Import default components
+@import '../../node_modules/foundation-sites/scss/grid/grid';
+@import '../../node_modules/foundation-sites/scss/grid/flex-grid';
+@import '../../node_modules/foundation-sites/scss/components/flex';
+@import '../../node_modules/foundation-sites/scss/components/top-bar';
+@import '../../node_modules/foundation-sites/scss/components/title-bar';
+@import '../../node_modules/foundation-sites/scss/components/off-canvas';
+@import '../../node_modules/foundation-sites/scss/components/menu';
+@import '../../node_modules/foundation-sites/scss/components/menu-icon';
+@import '../../node_modules/foundation-sites/scss/components/flex-video';
+@import '../../node_modules/foundation-sites/scss/typography/typography';
+@import '../../node_modules/motion-ui/motion-ui';
+
+// Call default mixins
+@include foundation-global-styles;
+@include foundation-flex-classes;
+@include foundation-flex-grid;
+@include foundation-top-bar;
+@include foundation-title-bar;
+@include foundation-off-canvas;
+@include foundation-menu;
+@include foundation-menu-icon;
+@include foundation-flex-video;
+@include foundation-typography;
+@include motion-ui-transitions;
+@include motion-ui-animations;
