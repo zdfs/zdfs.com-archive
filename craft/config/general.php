@@ -16,13 +16,13 @@ return array(
 	
 	'45.55.10.201' => array(
 		'siteUrl' => 'http://45.55.10.201',
-		'basePath' => '/www/html/images',
-		'baseUrl' => 'http://45.55.10.201'
+		'basePath' => '/var/www/html/images',
+		'baseUrl' => 'http://45.55.10.201/images'
 	),
 
 	'zdfs.dev' => array(
 		'basePath' => '/Users/zdfs/Hubs/zdfs.com/html/images',
-		'baseUrl' => 'https://zdfs.dev'
+		'baseUrl' => 'https://zdfs.dev/images'
 	)
 
 );
