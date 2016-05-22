@@ -1,0 +1,71 @@
+$menu-width: 300px;
+$menu-transition-time: 500ms;
+
+@mixin off-canvas-override() {
+
+  .off-canvas {
+    display: flex;
+    height: 100%;
+    align-items: flex-start;
+  }
+
+  .off-canvas-content {
+    width: 100%;
+    box-shadow: none;
+  }
+
+  .off-canvas-wrapper,
+  .off-canvas-wrapper-inner {
+    height: 100%;
+  }
+
+  .off-canvas-wrapper-inner {
+    display: flex;
+  }
+
+  @include breakpoint(small up) {
+
+    .off-canvas.position-left {
+
+      -webkit-transition: left $menu-transition-time ease-in-out;
+      -moz-transition: left $menu-transition-time ease-in-out;
+      -o-transition: left $menu-transition-time ease-in-out;
+      transition: left $menu-transition-time ease-in-out;
+
+      left: -#{$menu-width};
+
+    }
+
+    .off-canvas-content {
+      -webkit-transition: margin-left $menu-transition-time ease-in-out;
+      -moz-transition: margin-left $menu-transition-time ease-in-out;
+      -o-transition: margin-left $menu-transition-time ease-in-out;
+      transition: margin-left $menu-transition-time ease-in-out;
+      margin-left: 0;
+    }
+
+  }
+
+  @include breakpoint(large) {
+
+    .off-canvas.position-left {
+      -webkit-transition: left $menu-transition-time ease-in-out;
+      -moz-transition: left $menu-transition-time ease-in-out;
+      -o-transition: left $menu-transition-time ease-in-out;
+      transition: left $menu-transition-time ease-in-out;
+      left: 0;
+      width: $menu-width;
+    }
+
+    .off-canvas-content {
+      -webkit-transition: margin-left 1s ease-in-out;
+      -moz-transition: margin-left 1s ease-in-out;
+      -o-transition: margin-left 1s ease-in-out;
+      transition: margin-left 1s ease-in-out;
+      margin-left: $menu-width;
+    }
+
+
+  }
+
+}

@@ -123,6 +123,7 @@ $foundation-colors: (
   html {
     font-size: $global-font-size;
     box-sizing: border-box;
+    height: 100%;
   }
 
   // Set box-sizing globally to handle padding and border widths
@@ -142,6 +143,7 @@ $foundation-colors: (
     color: $body-font-color;
     background: $body-background;
     overflow-x: hidden;
+    height: 100%;
 
     @if ($body-antialiased) {
       -webkit-font-smoothing: antialiased;
@@ -634,4 +636,20 @@ $foundation-colors: (
   th {
     padding: 0;
   }
+}
+
+.wf-loading body {
+  opacity: 0;
+  transform: translateY(-20px);
+  -ms-transform: translateY(-20px);
+  -webkit-transform: translateY(-20px);
+}
+
+body {
+  opacity: 1;
+  transform: translateY(0);
+  -ms-transform: translateY(0);
+  -webkit-transform: translateY(0);
+  transition: transform .4s ease-in-out, opacity .4s ease-in-out;
+  -webkit-transition: -webkit-transform .4s ease-in-out, opacity .4s ease-in-out;
 }

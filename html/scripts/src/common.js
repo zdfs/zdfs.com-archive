@@ -18759,6 +18759,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 	s.parentNode.insertBefore(tk, s)
 })(document);
 (function($) {
-	$(document).foundation();
-}(jQuery));
 
+	$(document).foundation();
+
+}(jQuery));

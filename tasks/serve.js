@@ -28,9 +28,7 @@ gulp.task('serve', [
 	});
 
 	gulp.watch('./craft/templates/**/*.twig', browserSync.reload);
-	gulp.watch('./html/scss/*.scss', ['sass', 'cssnano']);
-	gulp.watch('./html/styles/min/*.css').on('change', browserSync.reload);
-	gulp.watch('./html/js/*.js', ['clean-scripts', 'concat-scripts', 'uglify']);
-	gulp.watch('./html/scripts/min/*.js', browserSync.reload);
+	gulp.watch('./html/scss/*.scss', ['sass', 'cssnano', browserSync.reload]);
+	gulp.watch('./html/js/*.js', ['clean-scripts', 'concat-scripts', 'uglify', browserSync.reload]);
 
 });
