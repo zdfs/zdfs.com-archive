@@ -16,10 +16,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title>
 		<link rel="home" href="{{ siteUrl }}"/>
-		{{ craft.minimee.css([
-				'/styles/zdfs.css',
-			])
-		}}
+		{{ craft.minimee.css(['/styles/zdfs.css']) }}
+{% block stylesheets %}
+
+{% endblock %}
 	</head>
 	<body class="no-js">
 		<div id="container">
@@ -28,12 +28,15 @@
 
 			<main id="content" role="main">
 				{% block content %}
-					<p>If you see me, you haven’t set your
-						<code>{% verbatim %}{% block content %}…{% endblock %}{% endverbatim %}</code> yet.</p>
-					<p>See Twig’s <a href="http://twig.sensiolabs.org/doc/templates.html#template-inheritance">Template
-							Inheritance</a> documentation for an explanation.</p>
+					<p>If you see me, you haven’t set your <code>{% verbatim %}{% block content %}…{% endblock %}{% endverbatim %}</code> yet.</p>
+					<p>See Twig’s <a href="http://twig.sensiolabs.org/doc/templates.html#template-inheritance">Template Inheritance</a> documentation for an explanation.</p>
 				{% endblock %}
 			</main>
+
+			{{ craft.minimee.js([
+					'/scripts/typekit.js',
+				])
+			}}
 
 			{#{% include '_includes/common/footer.twig' %}#}
 
