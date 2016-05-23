@@ -638,6 +638,10 @@ $foundation-colors: (
   }
 }
 
+.no-js body {
+  opacity: 0;
+}
+
 .wf-loading body {
   opacity: 0;
   transform: translateY(-20px);

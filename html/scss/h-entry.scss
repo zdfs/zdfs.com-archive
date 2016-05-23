@@ -1,0 +1,114 @@
+@import 'settings';
+
+@include breakpoint(small up) {
+
+  .h-entry {
+
+    h2 {
+      position: relative;
+      display: table;
+      margin: 1rem auto 1.5rem;
+      padding: 0 10px;
+      text-align: center;
+      background: map-get($foundation-palette, "primary");
+      color: $white;
+
+      &:before,
+      &:after {
+        position: absolute;
+        content: " ";
+        width: 15px;
+        height: 100%;
+        background: map-get($foundation-palette, "primary");
+        transform: skew(-15deg,0deg);
+      }
+
+      &:after {
+        left: -7px;
+      }
+
+      &:before {
+        left: auto;
+        right: -7px !important;
+      }
+
+    }
+
+    figure {
+
+      margin: 2rem 0;
+
+      img {
+        width: 100vw;
+      }
+
+      figcaption {
+        font-style: italic;
+        color: silver;
+        padding: .5rem 0;
+      }
+
+    }
+
+    blockquote {
+      display: block;
+      padding: 15px 20px 15px 45px;
+      margin: 0 0 20px;
+      position: relative;
+      text-align: justify;
+      border-left: 15px solid map-get($foundation-palette, "primary");
+      border-right: 2px solid rgba(scale_color(map-get($foundation-palette, "primary"), -20%), 0.5);
+
+      cite {
+        margin: 1rem 0 0;
+      }
+    }
+
+  }
+
+}
+
+@include breakpoint(medium up) {
+
+  .h-entry {
+
+    margin: 0 2rem 1rem;
+
+    .text-block {
+      margin: 0 auto;
+      width: 90%;
+
+      p,
+      blockquote {
+        font-size: 1.2rem;
+        line-height: 1.8;
+        margin: 1.5rem 0;
+      }
+
+    }
+
+  }
+
+}
+
+@include breakpoint(large up) {
+
+  .h-entry {
+    max-width: 1400px;
+    margin: 0 2rem 1rem;
+
+    .text-block {
+      margin: 0 auto;
+      width: 85%;
+
+      p,
+      blockquote {
+        font-size: 1.5rem;
+        margin: 2rem 0;
+      }
+
+    }
+
+  }
+
+}

@@ -8,5 +8,10 @@
 			{% include '_includes/contentBlocks/text.twig' with {
 				text: block.textArea
 			} %}
+    {% case 'image' %}
+      {% include '_includes/contentBlocks/image.twig' with {
+        image: block.articleImage,
+        caption: block.articleImageCaption
+      } %}
 	{% endswitch %}
 {% endfor %}

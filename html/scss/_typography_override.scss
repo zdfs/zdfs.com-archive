@@ -1,0 +1,17 @@
+@import 'settings';
+
+@mixin typography-override() {
+
+  @include breakpoint(small-up) {
+
+    a {
+      -webkit-transition: color 250ms ease-in-out;
+      -moz-transition: color 250ms ease-in-out;
+      -o-transition: color 250ms ease-in-out;
+      transition: color 250ms ease-in-out;
+    }
+
+  }
+
+}
+

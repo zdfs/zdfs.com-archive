@@ -5,11 +5,9 @@ $menu-transition-time: 500ms;
 @mixin off-canvas-override() {
 
   .off-canvas {
-    display: flex;
     height: 100%;
     align-items: flex-start;
-    background: -webkit-linear-gradient(to top, #232526 , #414345);
-    background: linear-gradient(to top, #232526 , #414345);
+    flex-flow: row wrap;
   }
 
   .off-canvas-content {
@@ -59,6 +57,8 @@ $menu-transition-time: 500ms;
       left: 0;
       width: $offcanvas-size;
       z-index: 0;
+      position: fixed;
+      border-right: 1px solid #e1e1e1;
     }
 
     .off-canvas-content {

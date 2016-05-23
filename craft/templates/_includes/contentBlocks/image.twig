@@ -1,0 +1,10 @@
+{% set caption = caption is defined ? caption : null %}
+
+<div class="image-block align-center"}>
+  <figure>
+    <img src="{{ image.first.url }}" alt="{{ image.first }}">
+    {% if caption %}
+      <figcaption>{{ caption }}</figcaption>
+    {% endif %}
+  </figure>
+</div>

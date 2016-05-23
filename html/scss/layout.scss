@@ -23,6 +23,7 @@
 
 // Overrides
 @import 'off_canvas_override';
+@import 'typography_override';
 
 // Call default mixins
 @include foundation-global-styles;
@@ -41,3 +42,4 @@
 
 // Call Overrides
 @include off-canvas-override;
+@include typography-override;
