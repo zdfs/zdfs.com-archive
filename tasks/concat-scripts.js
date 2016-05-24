@@ -11,6 +11,7 @@ gulp.task('concat-scripts', function() {
 				'./node_modules/foundation-sites/dist/foundation.js',
 				'./html/js/typekit.js',
 				'./html/js/headroom.js',
+				'./html/js/svgInjector.js',
 				'./html/js/init.js'
 			])
 			.pipe(concat('common.js'))

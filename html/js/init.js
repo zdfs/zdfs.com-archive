@@ -9,4 +9,7 @@
 
 	headroom.init();
 
+	var mySVGsToInject = document.querySelectorAll('.iconic-sprite');
+	SVGInjector(mySVGsToInject);
+
 }(jQuery));

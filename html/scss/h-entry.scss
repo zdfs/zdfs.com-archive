@@ -70,12 +70,37 @@
 
     time {
       color: silver;
-      font-size: .8rem;
     }
 
     .meta-data {
       justify-content: center;
       margin-bottom: 1rem;
+
+      .nav-option {
+
+        padding: 0;
+        margin: 0 4rem;
+
+        .icon.link {
+          fill: map-get($foundation-palette, primary);
+          -webkit-transition: fill 200ms ease-in-out;
+          -moz-transition: fill 200ms ease-in-out;
+          -o-transition: fill 200ms ease-in-out;
+          transition: fill 200ms ease-in-out;
+          &:hover {
+            fill: scale-color(map-get($foundation-palette, primary), $lightness: -20);
+          }
+        }
+
+        .icon-heart {
+          fill: #333;
+          padding-top: .5rem;
+        }
+
+      }
+
+
+
     }
 
   }

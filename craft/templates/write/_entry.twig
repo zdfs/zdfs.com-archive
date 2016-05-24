@@ -18,9 +18,45 @@
               <h2 class="p-name">{{ entry.title }}</h2>
               {% if prevEntry or nextEntry %}
                 <ul class="menu meta-data">
-                  {% if prevEntry %}<li><a href="{{ prevEntry.url }}" aria-label="Previous post">&laquo;</a></li>{% endif %}
+                  {% if prevEntry %}
+                  <li>
+                    <a class="nav-option" href="{{ prevEntry.url }}" aria-label="Previous post">
+                      <img src="/iconic/open-iconic.svg" class="iconic-sprite" style="display:none;" />
+                      <svg viewBox="0 0 8 8" class="icon link">
+                        <use xlink:href="#arrow-thick-left" class="icon-arrow-thick-left"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  {% else %}
+                  <li>
+                    <span class="nav-option" aria-label="The end.">
+                      <img src="/iconic/open-iconic.svg" class="iconic-sprite" style="display:none;" />
+                      <svg viewBox="0 0 8 8" class="icon heart">
+                        <use xlink:href="#heart" class="icon-heart"></use>
+                      </svg>
+                    </span>
+                  </li>
+                  {% endif %}
                   <li><time class="dt-published" datetime="{{ entry.postDate }}">Posted on {{ entry.postDate.format('M d, Y') }}</time></li>
-                  {% if nextEntry %}<li class="nav-right"><a href="{{ nextEntry.url }}" aria-label="Next post">&raquo;</a></li>{% endif %}
+                  {% if nextEntry %}
+                  <li class="nav-right">
+                    <a class="nav-option" href="{{ nextEntry.url }}" aria-label="Next post">
+                      <img src="/iconic/open-iconic.svg" class="iconic-sprite" style="display:none;" />
+                      <svg viewBox="0 0 8 8" class="icon link">
+                        <use xlink:href="#arrow-thick-right" class="icon-arrow-thick-right"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  {% else %}
+                  <li>
+                    <span class="nav-option" aria-label="The beginning.">
+                      <img src="/iconic/open-iconic.svg" class="iconic-sprite" style="display:none;" />
+                      <svg viewBox="0 0 8 8" class="icon heart">
+                        <use xlink:href="#heart" class="icon-heart"></use>
+                      </svg>
+                    </span>
+                  </li>
+                  {% endif %}
                 </ul>
               {% endif %}
             </div>
