@@ -13,7 +13,7 @@ gulp.task('serve', [
 	var files = [
 		'./html/scss/**/*.scss',
 		'./craft/templates/**/*.twig',
-		'./html/js/**/*.js'
+		'./html/js/*.js'
 	];
 
 	browserSync.init(files, {
