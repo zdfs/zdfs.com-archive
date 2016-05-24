@@ -2,19 +2,6 @@
 
 @mixin top-bar-override() {
 
-  .headroom {
-    will-change: transform;
-    transition: transform 200ms linear;
-  }
-
-  .headroom--pinned {
-    transform: translateY(0%);
-  }
-
-  .headroom--unpinned {
-    transform: translateY(-100%);
-  }
-
   @include breakpoint(small up) {
 
     .top-bar {
@@ -24,11 +11,51 @@
       width: 100%;
       position: fixed;
 
-      .menu {
+      .primary-nav {
         background-color: $white;
         justify-content: center;
+
+        li a {
+          padding: 0 1rem;
+
+          &.logo {
+            background-color: map-get($foundation-palette, primary);
+            color: $white;
+            padding: .7rem 0;
+            border-radius: 40px;
+            height: 40px;
+            text-align: center;
+            width: 40px;
+            display: inline-block;
+            cursor: pointer;
+            -webkit-transition: background-color 250ms ease-in-out;
+            -moz-transition: background-color 250ms ease-in-out;
+            -o-transition: background-color 250ms ease-in-out;
+            transition: background-color 250ms ease-in-out;
+
+            &:hover {
+              background-color: scale-color(map-get($foundation-palette, primary), $lightness: -20%);
+            }
+
+          }
+
+        }
+
       }
 
+    }
+
+    .headroom {
+      will-change: transform;
+      transition: transform 200ms linear;
+    }
+
+    .headroom--pinned {
+      transform: translateY(0%);
+    }
+
+    .headroom--unpinned {
+      transform: translateY(-100%);
     }
 
   }
