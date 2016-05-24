@@ -10,6 +10,7 @@ gulp.task('concat-scripts', function() {
 				'./node_modules/jquery/dist/jquery.js',
 				'./node_modules/foundation-sites/dist/foundation.js',
 				'./html/js/typekit.js',
+				'./html/js/headroom.js',
 				'./html/js/init.js'
 			])
 			.pipe(concat('common.js'))

@@ -12,26 +12,23 @@
 {% set nextEntry = entry.getNext(params) %}
 
 {% block content %}
-        <div class="row">
-          <div class="columns">
-            <article class="h-entry">
-              <div class="e-content">
-                <h2 class="p-name">{{ entry.title }}</h2>
-  {% include '_includes/contentBlocks/blocks.twig' with { blocks: entry.contentBlocks } %}
-              </div>
-            </article>
+        <article class="h-entry">
+          <div class="row collapse">
+            <div class="columns small-12 entry-meta">
+              <h2 class="p-name">{{ entry.title }}</h2>
+              {% if prevEntry or nextEntry %}
+                <ul class="menu meta-data">
+                  {% if prevEntry %}<li><a href="{{ prevEntry.url }}" aria-label="Previous post">&laquo;</a></li>{% endif %}
+                  <li><time class="dt-published" datetime="{{ entry.postDate }}">Posted on {{ entry.postDate.format('M d, Y') }}</time></li>
+                  {% if nextEntry %}<li class="nav-right"><a href="{{ nextEntry.url }}" aria-label="Next post">&raquo;</a></li>{% endif %}
+                </ul>
+              {% endif %}
+            </div>
           </div>
-        </div>
-{% endblock %}
-
-{%  block postMeta %}
-  <div class="metadata">
-    {% if prevEntry or nextEntry %}
-      <ul class="menu expanded">
-        {% if prevEntry %}<li><a href="{{ prevEntry.url }}" aria-label="Previous post">&laquo; Previous post</a></li>{% endif %}
-        {% if nextEntry %}<li class="nav-right"><a href="{{ nextEntry.url }}" aria-label="Next post">Next post &raquo;</a></li>{% endif %}
-      </ul>
-    {% endif %}
-    <time class="dt-published" datetime="{{ entry.postDate }}">{{ entry.postDate.format('M d, Y') }}</time>
-  </div>
+          <div class="row">
+            <div class="columns small-12 e-content">
+    {% include '_includes/contentBlocks/blocks.twig' with { blocks: entry.contentBlocks } %}
+            </div>
+          </div>
+        </article>
 {% endblock %}

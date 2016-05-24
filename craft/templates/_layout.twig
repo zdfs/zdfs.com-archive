@@ -16,6 +16,9 @@
   <title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title>
   <link rel="home" href="{{ siteUrl }}"/>
   <link rel="stylesheet" href="/styles/min/layout.css" />
+  <noscript>
+    <link rel="stylesheet" href="/styles/min/no-js.css" />
+  </noscript>
 {% block stylesheets %}{% endblock %}
 </head>
 <body>
@@ -23,14 +26,18 @@
     <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
       <div class="off-canvas position-left" data-off-canvas>
         <ul class="vertical menu">
-          <li><a href="#">Write</a></li>
-          <li><a href="#">Capture</a></li>
-          <li><a href="#">Code</a></li>
-          <li><a href="#">About</a></li>
         </ul>
-{% block postMeta %}{% endblock %}
       </div>
       <main id="content" role="main" class="off-canvas-content" data-off-canvas-content>
+        <nav class="top-bar" data-headroom>
+          <ul class="menu">
+            <li><a>Write</a></li>
+            <li><a>Code</a></li>
+            <li>zdfs</li>
+            <li><a>Capture</a></li>
+            <li><a>About</a></li>
+          </ul>
+        </nav>
 {% block content %}
           <p>If you see me, you haven’t set your <code>{% verbatim %}{% block content %}…{% endblock %}{% endverbatim %}</code> yet.</p>
           <p>See Twig’s <a href="http://twig.sensiolabs.org/doc/templates.html#template-inheritance">Template Inheritance</a> documentation for an explanation.</p>

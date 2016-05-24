@@ -2,41 +2,45 @@
 
 @include breakpoint(small up) {
 
+  .no-js {
+
+    .h-entry {
+
+      h2 {
+        font-weight: $global-weight-bold;
+      }
+
+    }
+
+  }
+
   .h-entry {
 
+    padding-top: 3.75rem;
+
     h2 {
-      position: relative;
+
+      color: $body-font-color;
       display: table;
-      margin: 1rem auto 1.5rem;
-      padding: 0 10px;
-      text-align: center;
-      background: map-get($foundation-palette, "primary");
-      color: $white;
+      margin: 1rem auto;
+      text-decoration: none;
+      text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+      background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 2px, $body-font-color 2px, $body-font-color 3px, rgba(0, 0, 0, 0) 3px);
+      line-height: 1.3;
 
-      &:before,
-      &:after {
-        position: absolute;
-        content: " ";
-        width: 15px;
-        height: 100%;
-        background: map-get($foundation-palette, "primary");
-        transform: skew(-15deg,0deg);
-      }
+      @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
 
-      &:after {
-        left: -7px;
-      }
+        h2 {
+          background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 2px, $body-font-color 2px, $body-font-color 2.5px, rgba(0, 0, 0, 0) 2.5px);
+        }
 
-      &:before {
-        left: auto;
-        right: -7px !important;
       }
 
     }
 
     figure {
 
-      margin: 2rem 0;
+      margin: 0.5rem 0;
 
       img {
         width: 100vw;
@@ -56,12 +60,22 @@
       margin: 0 0 20px;
       position: relative;
       text-align: justify;
-      border-left: 15px solid map-get($foundation-palette, "primary");
-      border-right: 2px solid rgba(scale_color(map-get($foundation-palette, "primary"), -20%), 0.5);
+      border-left: 15px solid map-get($foundation-palette, primary);
+      border-right: 2px solid rgba(scale_color(map-get($foundation-palette, primary), -20%), 0.5);
 
       cite {
         margin: 1rem 0 0;
       }
+    }
+
+    time {
+      color: silver;
+      font-size: .8rem;
+    }
+
+    .meta-data {
+      justify-content: center;
+      margin-bottom: 1rem;
     }
 
   }
@@ -72,7 +86,19 @@
 
   .h-entry {
 
-    margin: 0 2rem 1rem;
+    h2 {
+      text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+      background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 2px, $body-font-color 3px, $body-font-color 4px, rgba(0, 0, 0, 0) 3px);
+      line-height: 1.1;
+
+      @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+
+        h2 {
+          background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 2px, $body-font-color 3px, $body-font-color 3.5px, rgba(0, 0, 0, 0) 3.5px);
+        }
+
+      }
+    }
 
     .text-block {
       margin: 0 auto;
@@ -94,8 +120,8 @@
 @include breakpoint(large up) {
 
   .h-entry {
+
     max-width: 1400px;
-    margin: 0 2rem 1rem;
 
     .text-block {
       margin: 0 auto;

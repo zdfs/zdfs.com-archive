@@ -1,6 +1,6 @@
-@import 'settings';
+@import '../settings';
 
-$menu-transition-time: 500ms;
+$menu-transition-time: 200ms;
 
 @mixin off-canvas-override() {
 
@@ -62,10 +62,10 @@ $menu-transition-time: 500ms;
     }
 
     .off-canvas-content {
-      -webkit-transition: margin-left 1s ease-in-out;
-      -moz-transition: margin-left 1s ease-in-out;
-      -o-transition: margin-left 1s ease-in-out;
-      transition: margin-left 1s ease-in-out;
+      -webkit-transition: margin-left $menu-transition-time ease-in-out;
+      -moz-transition: margin-left $menu-transition-time ease-in-out;
+      -o-transition: margin-left $menu-transition-time ease-in-out;
+      transition: margin-left $menu-transition-time ease-in-out;
       margin-left: $offcanvas-size;
     }
 

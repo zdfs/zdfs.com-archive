@@ -1,8 +1,8 @@
-@import 'settings';
+@import '../settings';
 
 @mixin typography-override() {
 
-  @include breakpoint(small-up) {
+  @include breakpoint(small up) {
 
     a {
       -webkit-transition: color 250ms ease-in-out;

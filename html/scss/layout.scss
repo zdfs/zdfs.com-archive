@@ -22,8 +22,9 @@
 @import '../../node_modules/motion-ui/motion-ui';
 
 // Overrides
-@import 'off_canvas_override';
-@import 'typography_override';
+@import 'overrides/off_canvas_override';
+@import 'overrides/typography_override';
+@import 'overrides/top_bar_override';
 
 // Call default mixins
 @include foundation-global-styles;
@@ -43,3 +44,4 @@
 // Call Overrides
 @include off-canvas-override;
 @include typography-override;
+@include top-bar-override;

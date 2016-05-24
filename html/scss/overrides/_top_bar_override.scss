@@ -1,0 +1,47 @@
+@import '../settings';
+
+@mixin top-bar-override() {
+
+  .headroom {
+    will-change: transform;
+    transition: transform 200ms linear;
+  }
+
+  .headroom--pinned {
+    transform: translateY(0%);
+  }
+
+  .headroom--unpinned {
+    transform: translateY(-100%);
+  }
+
+  @include breakpoint(small up) {
+
+    .top-bar {
+
+      background-color: $white;
+      border-bottom: 1px solid #e1e1e1;
+      width: 100%;
+      position: fixed;
+
+      .menu {
+        background-color: $white;
+        justify-content: center;
+      }
+
+    }
+
+  }
+
+  @include breakpoint(large up) {
+
+    .top-bar {
+
+      width: -webkit-calc(100% - 300px);
+      width: calc(100% - 300px);
+
+    }
+
+  }
+
+}
