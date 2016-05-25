@@ -12,7 +12,8 @@ gulp.task('sass', function () {
 		.pipe(sass({
 			includePaths: [
 				'./node_modules/foundation-sites/scss',
-				'./node_modules/Suit/node_modules/motion-ui/src'
+				'./node_modules/Suit/node_modules/motion-ui/src',
+				'./node_modules/sass-toolkit/stylesheets'
 			]
 		}).on('error', sass.logError))
 		.pipe(sourcemaps.write())

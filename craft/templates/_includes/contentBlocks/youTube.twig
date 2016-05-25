@@ -1,3 +1,11 @@
 <div class="flex-video widescreen embed-block">
 	<iframe src="https://www.youtube.com/embed/{{ videoID }}" frameborder="0" allowfullscreen></iframe>
+	<noscript>
+    <p><a href="//www.youtube.com/watch?v={{ videoID }}" target="_blank">Watch the video on YouTube.</a></p>
+    <p>
+      <a href="//www.youtube.com/watch?v={{ videoID }}" target="_blank">
+        <img src="//img.youtube.com/vi/{{ videoID }}/maxresdefault.jpg" alt="Click this to go to YouTube." />
+      </a>
+    </p>
+  </noscript>
 </div>
