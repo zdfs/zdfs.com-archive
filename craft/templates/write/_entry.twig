@@ -15,13 +15,19 @@
         <article class="h-entry">
           <div class="row collapse">
             <div class="columns small-12 entry-meta">
+              {% if entry.linkSource %}
+                <a href="{{ entry.linkSource }}" target="_blank" class="linked-header">
+              {% endif %}
               <h2 class="p-name">{{ entry.title }}</h2>
+              {% if entry.linkSource %}
+                </a>
+              {% endif %}
               {% if prevEntry or nextEntry %}
                 <ul class="menu meta-data">
                   {% if prevEntry %}
                   <li>
                     <a class="nav-option" href="{{ prevEntry.url }}" aria-label="Previous post">
-                      <img src="/iconic/open-iconic.svg" class="iconic-sprite" style="display:none;" />
+                      <img src="/iconic/open-iconic.svg" class="iconic-sprite hide" />
                       <svg viewBox="0 0 8 8" class="icon link">
                         <use xlink:href="#arrow-thick-left" class="icon-arrow-thick-left"></use>
                       </svg>
@@ -31,7 +37,7 @@
                   {% else %}
                   <li>
                     <span class="nav-option" aria-label="The end.">
-                      <img src="/iconic/open-iconic.svg" class="iconic-sprite" style="display:none;" />
+                      <img src="/iconic/open-iconic.svg" class="iconic-sprite hide" />
                       <svg viewBox="0 0 8 8" class="icon heart">
                         <use xlink:href="#heart" class="icon-heart"></use>
                       </svg>
@@ -43,7 +49,7 @@
                   {% if nextEntry %}
                   <li class="nav-right">
                     <a class="nav-option" href="{{ nextEntry.url }}" aria-label="Next post">
-                      <img src="/iconic/open-iconic.svg" class="iconic-sprite" style="display:none;" />
+                      <img src="/iconic/open-iconic.svg" class="iconic-sprite hide" />
                       <svg viewBox="0 0 8 8" class="icon link">
                         <use xlink:href="#arrow-thick-right" class="icon-arrow-thick-right"></use>
                       </svg>
@@ -53,7 +59,7 @@
                   {% else %}
                   <li>
                     <span class="nav-option" aria-label="The beginning.">
-                      <img src="/iconic/open-iconic.svg" class="iconic-sprite" style="display:none;" />
+                      <img src="/iconic/open-iconic.svg" class="iconic-sprite hide" />
                       <svg viewBox="0 0 8 8" class="icon heart">
                         <use xlink:href="#heart" class="icon-heart"></use>
                       </svg>
@@ -68,6 +74,11 @@
           <div class="row">
             <div class="columns small-12 e-content">
     {% include '_includes/contentBlocks/blocks.twig' with { blocks: entry.contentBlocks } %}
+              {% if entry.linkSource %}
+              <div class="text-block">
+                <a href="{{ entry.linkSource }}" target="_blank" class="linked-header">Link source</a>
+              </div>
+              {% endif %}
             </div>
           </div>
         </article>
