@@ -1,8 +1,11 @@
-{% set caption = caption is defined ? caption : null %}
+{% import '_macros/responsiveImages' as resImg %}
 
-<div class="image-block align-center"}>
+{% set caption = caption is defined ? caption : null %}
+{% set articleImage = resImg.responsive(image.first()) %}
+
+<div class="image-block align-center">
   <figure>
-    <img src="{{ image.first.url }}" alt="{{ image.first }}">
+    {{ articleImage }}
     {% if caption %}
       <figcaption>{{ caption }}</figcaption>
     {% endif %}

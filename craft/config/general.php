@@ -11,7 +11,8 @@ return array(
 	
 	'*' => array(
 		'cpTrigger' => 'n3w574r7',
-		'enableCsrfProtection' => true
+		'enableCsrfProtection' => true,
+		'generateTransformsBeforePageLoad' => true
 	),
 	
 	'45.55.10.201' => array(
