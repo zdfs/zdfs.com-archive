@@ -11,7 +11,8 @@
     {% case 'image' %}
       {% include '_includes/contentBlocks/image.twig' with {
         image: block.articleImage,
-        caption: block.articleImageCaption
+        caption: block.articleImageCaption,
+        linkSource: block.articleImageLink
       } %}
 	{% endswitch %}
 {% endfor %}
