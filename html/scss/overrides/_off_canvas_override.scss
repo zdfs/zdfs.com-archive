@@ -18,6 +18,7 @@ $menu-transition-time: 200ms;
   .off-canvas-wrapper,
   .off-canvas-wrapper-inner {
     height: 100%;
+		-webkit-overflow-scrolling: touch;
   }
 
   .off-canvas-wrapper-inner {

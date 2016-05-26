@@ -19687,13 +19687,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 	$(document).foundation();
 
-	// var myElement = document.querySelector('[data-headroom]');
-	// var headroom  = new Headroom(myElement, {
-	// 	scroller: document.querySelector('.off-canvas-wrapper'),
-	// 	tolerance: 40
-	// });
-  //
-	// headroom.init();
+	var myElement = document.querySelector('[data-headroom]');
+	var headroom  = new Headroom(myElement, {
+		scroller: document.querySelector('.off-canvas-wrapper'),
+		tolerance: 40
+	});
+
+	headroom.init();
 
 	var mySVGsToInject = document.querySelectorAll('.iconic-sprite');
 	SVGInjector(mySVGsToInject);
