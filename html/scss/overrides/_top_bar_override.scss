@@ -10,7 +10,7 @@
       border-bottom: 1px solid #e1e1e1;
       width: 100%;
       position: fixed;
-			z-index: 2;
+      z-index: 2;
 
       .primary-nav {
         background-color: $white;
@@ -67,7 +67,7 @@
 
       width: -webkit-calc(100% - 300px);
       width: calc(100% - 300px);
-      max-width: 1400px;
+      max-width: $hentry-width;
 
     }
 

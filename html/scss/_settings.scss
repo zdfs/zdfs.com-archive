@@ -71,6 +71,7 @@ $global-radius: 0;
 $global-text-direction: ltr;
 $global-flexbox: true;
 $print-transparent-backgrounds: true;
+$hentry-width: 80rem;
 
 @include add-foundation-colors;
 
