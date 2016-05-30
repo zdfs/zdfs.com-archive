@@ -10,7 +10,13 @@
 
 	headroom.init();
 
-	var mySVGsToInject = document.querySelectorAll('.iconic-sprite');
-	SVGInjector(mySVGsToInject);
+	grunticon(
+		[
+			'/iconic/icons.data.svg.css',
+			'/iconic/icons.data.png.css',
+			'/iconic/icons.fallback.css'
+		],
+		grunticon.svgLoadedCallback
+	);
 
 }(jQuery));

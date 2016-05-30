@@ -1,0 +1,281 @@
+<!doctype HTML>
+<html>
+	<head>
+		<title>Icons Preview!</title>
+		<meta charset="utf-8">
+		<style>
+			body {
+				background-image: linear-gradient(#eee 25%, transparent 25%, transparent), linear-gradient(#eee 25%, transparent 25%, transparent), linear-gradient(transparent 75%, #eee 75%), linear-gradient(transparent 75%, #eee 75%);
+				width: auto;
+				background-size: 10px 10px;
+			}
+		</style>
+		<script>
+			/*! grunt-grunticon Stylesheet Loader - v2.1.6 | https://github.com/filamentgroup/grunticon | (c) 2015 Scott Jehl, Filament Group, Inc. | MIT license. */
+
+!function(){function e(e,n,t){"use strict";var o=window.document.createElement("link"),r=n||window.document.getElementsByTagName("script")[0],a=window.document.styleSheets;return o.rel="stylesheet",o.href=e,o.media="only x",r.parentNode.insertBefore(o,r),o.onloadcssdefined=function(e){for(var n,t=0;t<a.length;t++)a[t].href&&a[t].href===o.href&&(n=!0);n?e():setTimeout(function(){o.onloadcssdefined(e)})},o.onloadcssdefined(function(){o.media=t||"all"}),o}function n(e,n){e.onload=function(){e.onload=null,n&&n.call(e)},"isApplicationInstalled"in navigator&&"onloadcssdefined"in e&&e.onloadcssdefined(n)}!function(t){var o=function(r,a){"use strict";if(r&&3===r.length){var i=t.navigator,c=t.document,s=t.Image,d=!(!c.createElementNS||!c.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect||!c.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image","1.1")||t.opera&&-1===i.userAgent.indexOf("Chrome")||-1!==i.userAgent.indexOf("Series40")),l=new s;l.onerror=function(){o.method="png",o.href=r[2],e(r[2])},l.onload=function(){var t=1===l.width&&1===l.height,i=r[t&&d?0:t?1:2];t&&d?o.method="svg":t?o.method="datapng":o.method="png",o.href=i,n(e(i),a)},l.src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==",c.documentElement.className+=" grunticon"}};o.loadCSS=e,o.onloadCSS=n,t.grunticon=o}(this),function(e,n){"use strict";var t=n.document,o="grunticon:",r=function(e){if(t.attachEvent?"complete"===t.readyState:"loading"!==t.readyState)e();else{var n=!1;t.addEventListener("readystatechange",function(){n||(n=!0,e())},!1)}},a=function(e){return n.document.querySelector('link[href$="'+e+'"]')},i=function(e){var n,t,r,a,i,c,s={};if(n=e.sheet,!n)return s;t=n.cssRules?n.cssRules:n.rules;for(var d=0;d<t.length;d++)r=t[d].cssText,a=o+t[d].selectorText,i=r.split(");")[0].match(/US\-ASCII\,([^"']+)/),i&&i[1]&&(c=decodeURIComponent(i[1]),s[a]=c);return s},c=function(e){var n,r,a,i;a="data-grunticon-embed";for(var c in e){i=c.slice(o.length);try{n=t.querySelectorAll(i)}catch(s){continue}r=[];for(var d=0;d<n.length;d++)null!==n[d].getAttribute(a)&&r.push(n[d]);if(r.length)for(d=0;d<r.length;d++)r[d].innerHTML=e[c],r[d].style.backgroundImage="none",r[d].removeAttribute(a)}return r},s=function(n){"svg"===e.method&&r(function(){c(i(a(e.href))),"function"==typeof n&&n()})};e.embedIcons=c,e.getCSS=a,e.getIcons=i,e.ready=r,e.svgLoadedCallback=s,e.embedSVG=s}(grunticon,this)}();
+			
+			grunticon(["icons.data.svg.css", "icons.data.png.css", "icons.fallback.css"], grunticon.svgLoadedCallback);
+		</script>
+		<noscript><link href="icons.fallback.css" rel="stylesheet"></noscript>
+	</head>
+	<body>
+
+		<h1>CUSTOM PREVIEW - you can change this in the previewTemplate option</h1>
+			<pre><code>.icon-account-login:</code></pre><div class="icon-account-login" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-account-logout:</code></pre><div class="icon-account-logout" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-action-redo:</code></pre><div class="icon-action-redo" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-action-undo:</code></pre><div class="icon-action-undo" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-align-center:</code></pre><div class="icon-align-center" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-align-left:</code></pre><div class="icon-align-left" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-align-right:</code></pre><div class="icon-align-right" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-aperture:</code></pre><div class="icon-aperture" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-arrow-bottom:</code></pre><div class="icon-arrow-bottom" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-arrow-circle-bottom:</code></pre><div class="icon-arrow-circle-bottom" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-arrow-circle-left:</code></pre><div class="icon-arrow-circle-left" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-arrow-circle-right:</code></pre><div class="icon-arrow-circle-right" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-arrow-circle-top:</code></pre><div class="icon-arrow-circle-top" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-arrow-left:</code></pre><div class="icon-arrow-left" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-arrow-right:</code></pre><div class="icon-arrow-right" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-arrow-thick-bottom:</code></pre><div class="icon-arrow-thick-bottom" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-arrow-thick-left:</code></pre><div class="icon-arrow-thick-left" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-arrow-thick-right:</code></pre><div class="icon-arrow-thick-right" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-arrow-thick-top:</code></pre><div class="icon-arrow-thick-top" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-arrow-top:</code></pre><div class="icon-arrow-top" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-audio-spectrum:</code></pre><div class="icon-audio-spectrum" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-audio:</code></pre><div class="icon-audio" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-badge:</code></pre><div class="icon-badge" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-ban:</code></pre><div class="icon-ban" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-bar-chart:</code></pre><div class="icon-bar-chart" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-basket:</code></pre><div class="icon-basket" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-battery-empty:</code></pre><div class="icon-battery-empty" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-battery-full:</code></pre><div class="icon-battery-full" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-beaker:</code></pre><div class="icon-beaker" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-bell:</code></pre><div class="icon-bell" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-bluetooth:</code></pre><div class="icon-bluetooth" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-bold:</code></pre><div class="icon-bold" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-bolt:</code></pre><div class="icon-bolt" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-book:</code></pre><div class="icon-book" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-bookmark:</code></pre><div class="icon-bookmark" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-box:</code></pre><div class="icon-box" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-briefcase:</code></pre><div class="icon-briefcase" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-british-pound:</code></pre><div class="icon-british-pound" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-browser:</code></pre><div class="icon-browser" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-brush:</code></pre><div class="icon-brush" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-bug:</code></pre><div class="icon-bug" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-bullhorn:</code></pre><div class="icon-bullhorn" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-calculator:</code></pre><div class="icon-calculator" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-calendar:</code></pre><div class="icon-calendar" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-camera-slr:</code></pre><div class="icon-camera-slr" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-caret-bottom:</code></pre><div class="icon-caret-bottom" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-caret-left:</code></pre><div class="icon-caret-left" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-caret-right:</code></pre><div class="icon-caret-right" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-caret-top:</code></pre><div class="icon-caret-top" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-cart:</code></pre><div class="icon-cart" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-chat:</code></pre><div class="icon-chat" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-check:</code></pre><div class="icon-check" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-chevron-bottom:</code></pre><div class="icon-chevron-bottom" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-chevron-left:</code></pre><div class="icon-chevron-left" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-chevron-right:</code></pre><div class="icon-chevron-right" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-chevron-top:</code></pre><div class="icon-chevron-top" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-circle-check:</code></pre><div class="icon-circle-check" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-circle-x:</code></pre><div class="icon-circle-x" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-clipboard:</code></pre><div class="icon-clipboard" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-clock:</code></pre><div class="icon-clock" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-cloud-download:</code></pre><div class="icon-cloud-download" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-cloud-upload:</code></pre><div class="icon-cloud-upload" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-cloud:</code></pre><div class="icon-cloud" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-cloudy:</code></pre><div class="icon-cloudy" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-code:</code></pre><div class="icon-code" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-cog:</code></pre><div class="icon-cog" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-collapse-down:</code></pre><div class="icon-collapse-down" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-collapse-left:</code></pre><div class="icon-collapse-left" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-collapse-right:</code></pre><div class="icon-collapse-right" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-collapse-up:</code></pre><div class="icon-collapse-up" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-command:</code></pre><div class="icon-command" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-comment-square:</code></pre><div class="icon-comment-square" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-compass:</code></pre><div class="icon-compass" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-contrast:</code></pre><div class="icon-contrast" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-copywriting:</code></pre><div class="icon-copywriting" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-credit-card:</code></pre><div class="icon-credit-card" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-crop:</code></pre><div class="icon-crop" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-dashboard:</code></pre><div class="icon-dashboard" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-data-transfer-download:</code></pre><div class="icon-data-transfer-download" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-data-transfer-upload:</code></pre><div class="icon-data-transfer-upload" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-delete:</code></pre><div class="icon-delete" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-dial:</code></pre><div class="icon-dial" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-document:</code></pre><div class="icon-document" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-dollar:</code></pre><div class="icon-dollar" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-double-quote-sans-left:</code></pre><div class="icon-double-quote-sans-left" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-double-quote-sans-right:</code></pre><div class="icon-double-quote-sans-right" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-double-quote-serif-left:</code></pre><div class="icon-double-quote-serif-left" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-double-quote-serif-right:</code></pre><div class="icon-double-quote-serif-right" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-droplet:</code></pre><div class="icon-droplet" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-eject:</code></pre><div class="icon-eject" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-elevator:</code></pre><div class="icon-elevator" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-ellipses:</code></pre><div class="icon-ellipses" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-envelope-closed:</code></pre><div class="icon-envelope-closed" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-envelope-open:</code></pre><div class="icon-envelope-open" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-euro:</code></pre><div class="icon-euro" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-excerpt:</code></pre><div class="icon-excerpt" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-expand-down:</code></pre><div class="icon-expand-down" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-expand-left:</code></pre><div class="icon-expand-left" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-expand-right:</code></pre><div class="icon-expand-right" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-expand-up:</code></pre><div class="icon-expand-up" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-external-link:</code></pre><div class="icon-external-link" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-eye:</code></pre><div class="icon-eye" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-eyedropper:</code></pre><div class="icon-eyedropper" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-file:</code></pre><div class="icon-file" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-fire:</code></pre><div class="icon-fire" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-flag:</code></pre><div class="icon-flag" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-flash:</code></pre><div class="icon-flash" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-folder:</code></pre><div class="icon-folder" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-fork:</code></pre><div class="icon-fork" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-fullscreen-enter:</code></pre><div class="icon-fullscreen-enter" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-fullscreen-exit:</code></pre><div class="icon-fullscreen-exit" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-globe:</code></pre><div class="icon-globe" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-graph:</code></pre><div class="icon-graph" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-grid-four-up:</code></pre><div class="icon-grid-four-up" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-grid-three-up:</code></pre><div class="icon-grid-three-up" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-grid-two-up:</code></pre><div class="icon-grid-two-up" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-hard-drive:</code></pre><div class="icon-hard-drive" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-header:</code></pre><div class="icon-header" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-headphones:</code></pre><div class="icon-headphones" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-heart:</code></pre><div class="icon-heart" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-home:</code></pre><div class="icon-home" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-image:</code></pre><div class="icon-image" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-inbox:</code></pre><div class="icon-inbox" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-infinity:</code></pre><div class="icon-infinity" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-info:</code></pre><div class="icon-info" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-italic:</code></pre><div class="icon-italic" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-justify-center:</code></pre><div class="icon-justify-center" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-justify-left:</code></pre><div class="icon-justify-left" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-justify-right:</code></pre><div class="icon-justify-right" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-key:</code></pre><div class="icon-key" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-laptop:</code></pre><div class="icon-laptop" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-layers:</code></pre><div class="icon-layers" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-lightbulb:</code></pre><div class="icon-lightbulb" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-link-broken:</code></pre><div class="icon-link-broken" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-link-intact:</code></pre><div class="icon-link-intact" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-list-rich:</code></pre><div class="icon-list-rich" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-list:</code></pre><div class="icon-list" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-location:</code></pre><div class="icon-location" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-lock-locked:</code></pre><div class="icon-lock-locked" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-lock-unlocked:</code></pre><div class="icon-lock-unlocked" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-loop-circular:</code></pre><div class="icon-loop-circular" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-loop-square:</code></pre><div class="icon-loop-square" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-loop:</code></pre><div class="icon-loop" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-magnifying-glass:</code></pre><div class="icon-magnifying-glass" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-map-marker:</code></pre><div class="icon-map-marker" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-map:</code></pre><div class="icon-map" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-media-pause:</code></pre><div class="icon-media-pause" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-media-play:</code></pre><div class="icon-media-play" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-media-record:</code></pre><div class="icon-media-record" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-media-skip-backward:</code></pre><div class="icon-media-skip-backward" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-media-skip-forward:</code></pre><div class="icon-media-skip-forward" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-media-step-backward:</code></pre><div class="icon-media-step-backward" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-media-step-forward:</code></pre><div class="icon-media-step-forward" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-media-stop:</code></pre><div class="icon-media-stop" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-medical-cross:</code></pre><div class="icon-medical-cross" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-menu:</code></pre><div class="icon-menu" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-microphone:</code></pre><div class="icon-microphone" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-minus:</code></pre><div class="icon-minus" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-monitor:</code></pre><div class="icon-monitor" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-moon:</code></pre><div class="icon-moon" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-move:</code></pre><div class="icon-move" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-musical-note:</code></pre><div class="icon-musical-note" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-open-iconic:</code></pre><div class="icon-open-iconic" style="width: 300px; height: 200px;" ></div><hr/>
+			<pre><code>.icon-paperclip:</code></pre><div class="icon-paperclip" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-pencil:</code></pre><div class="icon-pencil" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-people:</code></pre><div class="icon-people" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-person:</code></pre><div class="icon-person" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-phone:</code></pre><div class="icon-phone" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-pie-chart:</code></pre><div class="icon-pie-chart" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-pin:</code></pre><div class="icon-pin" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-play-circle:</code></pre><div class="icon-play-circle" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-plus:</code></pre><div class="icon-plus" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-power-standby:</code></pre><div class="icon-power-standby" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-print:</code></pre><div class="icon-print" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-project:</code></pre><div class="icon-project" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-pulse:</code></pre><div class="icon-pulse" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-puzzle-piece:</code></pre><div class="icon-puzzle-piece" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-question-mark:</code></pre><div class="icon-question-mark" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-rain:</code></pre><div class="icon-rain" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-random:</code></pre><div class="icon-random" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-reload:</code></pre><div class="icon-reload" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-resize-both:</code></pre><div class="icon-resize-both" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-resize-height:</code></pre><div class="icon-resize-height" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-resize-width:</code></pre><div class="icon-resize-width" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-rss-alt:</code></pre><div class="icon-rss-alt" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-rss:</code></pre><div class="icon-rss" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-script:</code></pre><div class="icon-script" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-share-boxed:</code></pre><div class="icon-share-boxed" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-share:</code></pre><div class="icon-share" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-shield:</code></pre><div class="icon-shield" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-signal:</code></pre><div class="icon-signal" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-signpost:</code></pre><div class="icon-signpost" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-sort-ascending:</code></pre><div class="icon-sort-ascending" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-sort-descending:</code></pre><div class="icon-sort-descending" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-spreadsheet:</code></pre><div class="icon-spreadsheet" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-star:</code></pre><div class="icon-star" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-sun:</code></pre><div class="icon-sun" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-tablet:</code></pre><div class="icon-tablet" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-tag:</code></pre><div class="icon-tag" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-tags:</code></pre><div class="icon-tags" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-target:</code></pre><div class="icon-target" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-task:</code></pre><div class="icon-task" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-terminal:</code></pre><div class="icon-terminal" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-text:</code></pre><div class="icon-text" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-thumb-down:</code></pre><div class="icon-thumb-down" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-thumb-up:</code></pre><div class="icon-thumb-up" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-timer:</code></pre><div class="icon-timer" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-transfer:</code></pre><div class="icon-transfer" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-trash:</code></pre><div class="icon-trash" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-underline:</code></pre><div class="icon-underline" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-vertical-align-bottom:</code></pre><div class="icon-vertical-align-bottom" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-vertical-align-center:</code></pre><div class="icon-vertical-align-center" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-vertical-align-top:</code></pre><div class="icon-vertical-align-top" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-video:</code></pre><div class="icon-video" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-volume-high:</code></pre><div class="icon-volume-high" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-volume-low:</code></pre><div class="icon-volume-low" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-volume-off:</code></pre><div class="icon-volume-off" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-warning:</code></pre><div class="icon-warning" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-wifi:</code></pre><div class="icon-wifi" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-wrench:</code></pre><div class="icon-wrench" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-x:</code></pre><div class="icon-x" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-yen:</code></pre><div class="icon-yen" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-zoom-in:</code></pre><div class="icon-zoom-in" style="width: 8px; height: 8px;" ></div><hr/>
+			<pre><code>.icon-zoom-out:</code></pre><div class="icon-zoom-out" style="width: 8px; height: 8px;" ></div><hr/>
+
+		<h2 id="embedded-svg-option">Embedded SVG option</h2>
+		<p>(The <code>data-grunticon-embed</code> attribute tells grunticon to inject SVG inline):</p>
+
+		<pre><code>icon-burger:</code></pre><div class="icon-burger" data-grunticon-embed style="width: px; height: px;" ></div><hr/>
+
+		<style>
+			.icon-burger {
+				width: 32px;
+				height: 30px;
+				display: inline-block;
+			}
+			  .icon-burger.alt .cheese {
+		                fill: red;
+		            }
+				 .icon-burger.alt .buns {
+		                fill: orange;
+		            }
+				  .icon-burger.alt .burger {
+		                fill: yellow;
+		            }
+		 		 .icon-burger.alt .lettuce {
+		                fill: green;
+		            }
+
+		</style>
+
+		<pre><code>icon-burger (styled variation):</code></pre><div class="icon-burger alt" data-grunticon-embed></div><hr/>
+
+
+
+</body>
+</html>
