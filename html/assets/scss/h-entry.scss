@@ -105,10 +105,36 @@
       -webkit-column-gap: 0;
       -moz-column-gap: 0;
       column-gap: 0;
+      border: 1px solid #eee;
+      background: #f1f1f1;
+      margin-bottom: 1rem;
 
       img {
         padding: 3px;
       }
+
+    }
+
+    .tag {
+      display: inline;
+      background-color: map-get($foundation-palette, primary);
+      color: #FFF;
+      padding: .1rem .3rem;
+      border-radius: 3px;
+      font-size: .8rem;
+      -webkit-transition: background-color 200ms ease-in-out;
+      -moz-transition: background-color 200ms ease-in-out;
+      -o-transition: background-color 200ms ease-in-out;
+      transition: background-color 200ms ease-in-out;
+
+      > svg {
+        fill: #FFF;
+      }
+
+      &:hover {
+        background-color: scale-color(map-get($foundation-palette, primary), $lightness: -20);
+      }
+
     }
 
   }
