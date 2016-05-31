@@ -10,4 +10,6 @@
 
 	headroom.init();
 
+	$('.gallery-block').lightGallery();
+
 }(jQuery));

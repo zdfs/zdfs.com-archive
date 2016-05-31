@@ -14,5 +14,9 @@
         caption: block.articleImageCaption,
         linkSource: block.articleImageLink
       } %}
+    {% case 'gallery' %}
+      {% include '_includes/contentBlocks/gallery.twig' with {
+        images: block.images
+      } %}
 	{% endswitch %}
 {% endfor %}

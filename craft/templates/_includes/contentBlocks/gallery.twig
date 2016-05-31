@@ -1,0 +1,8 @@
+{% import '_macros/responsiveImages' as resImg %}
+
+<div class="gallery-block">
+  {% for image in images %}
+    {% set altTag = image.title ~ image.imageDescription %}
+    {{ resImg.responsive(image, { imageGallery: true, alt: altTag }) }}
+  {% endfor %}
+</div>

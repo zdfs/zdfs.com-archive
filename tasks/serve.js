@@ -11,9 +11,9 @@ gulp.task('serve', [
 ], function () {
 
 	var files = [
-		'./html/scss/**/*.scss',
+		'./html/assets/scss/**/*.scss',
 		'./craft/templates/**/*.twig',
-		'./html/js/*.js'
+		'./html/assets/js/*.js'
 	];
 
 	browserSync.init(files, {
@@ -28,7 +28,7 @@ gulp.task('serve', [
 	});
 
 	gulp.watch('./craft/templates/**/*.twig', browserSync.reload);
-	gulp.watch('./html/scss/**/*.scss', ['sass', 'cssnano', browserSync.reload]);
-	gulp.watch('./html/js/*.js', ['clean-scripts', 'concat-scripts', 'uglify', browserSync.reload]);
+	gulp.watch('./html/assets/scss/**/*.scss', ['sass', 'cssnano', browserSync.reload]);
+	gulp.watch('./html/assets/js/*.js', ['clean-scripts', 'concat-scripts', 'uglify', browserSync.reload]);
 
 });

@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "The personal site of Zachary Forrest y Salazar",
   "main": "",
-  "dependencies": {},
+  "dependencies": {
+    "lightgallery": "^1.2.19",
+    "picturefill": "^3.0.2"
+  },
   "devDependencies": {
     "browser-sync": "^2.12.8",
     "del": "^2.2.0",

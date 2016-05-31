@@ -105,18 +105,40 @@
     {% endif %}
   {% endfor %}
 
-  <img
-    {# src attr: transformed only if necessary #}
-    {% if nativeWidth <= params['defaultWidth'] %}
-      src="{{ asset.getUrl(false) }}"
-    {% else %}
-      src="{{ asset.getUrl(transform|merge({width: params['defaultWidth']})) }}"
-    {% endif %}
+  {% if options.imageGallery %}
+    <a
+      {% if nativeWidth <= params['defaultWidth'] %}
+        href="{{ asset.getUrl(false) }}"
+      {% else %}
+        href="{{ asset.getUrl(transform|merge({width: params['defaultWidth']})) }}"
+      {% endif %}
+      data-srcset="{{ srcset|join(', ') }}"
+      data-sizes="{{ params['sizes']|join(', ') }}">
+      <img
+        {% if nativeWidth <= params['defaultWidth'] %}
+          src="{{ asset.getUrl(false) }}"
+        {% else %}
+          src="{{ asset.getUrl(transform|merge({width: params['defaultWidth']})) }}"
+        {% endif %}
 
-    srcset="{{ srcset|join(', ') }}"
-    sizes="{{ params['sizes']|join(', ') }}"
+        alt="{{ options.alt }}"
+        {{ self._classAttr(options.class) }}
+      />
+    </a>
+  {% else %}
+    <img
+      {# src attr: transformed only if necessary #}
+      {% if nativeWidth <= params['defaultWidth'] %}
+        src="{{ asset.getUrl(false) }}"
+      {% else %}
+        src="{{ asset.getUrl(transform|merge({width: params['defaultWidth']})) }}"
+      {% endif %}
 
-    alt="{{ options.alt }}"
-    {{ self._classAttr(options.class) }}
-  />
+      srcset="{{ srcset|join(', ') }}"
+      sizes="{{ params['sizes']|join(', ') }}"
+
+      alt="{{ options.alt }}"
+      {{ self._classAttr(options.class) }}
+    />
+  {% endif %}
 {% endmacro %}
