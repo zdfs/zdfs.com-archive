@@ -31,8 +31,13 @@
       margin: 0.5rem 0;
 
       &.natural {
-        width: inherit;
+
+        img {
+          width: inherit;
+        }
+
         margin: 0.5rem 1rem;
+        
       }
 
       img {
