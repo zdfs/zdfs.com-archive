@@ -98,9 +98,9 @@
     }
 
     .gallery-block {
-      -moz-column-count: 2;
-      -webkit-column-count: 2;
-      column-count: 2;
+      -moz-column-count: 1;
+      -webkit-column-count: 1;
+      column-count: 1;
       line-height: 0;
       -webkit-column-gap: 0;
       -moz-column-gap: 0;
@@ -119,9 +119,10 @@
       display: inline;
       background-color: map-get($foundation-palette, primary);
       color: #FFF;
-      padding: .1rem .3rem;
+      padding: 0.1rem 0.3rem;
+      margin: 0 0.15rem;
       border-radius: 3px;
-      font-size: .8rem;
+      font-size: 0.8rem;
       -webkit-transition: background-color 200ms ease-in-out;
       -moz-transition: background-color 200ms ease-in-out;
       -o-transition: background-color 200ms ease-in-out;
@@ -165,9 +166,9 @@
     }
 
     .gallery-block {
-      -moz-column-count: 3;
-      -webkit-column-count: 3;
-      column-count: 3;
+      -moz-column-count: 2;
+      -webkit-column-count: 2;
+      column-count: 2;
     }
 
   }
@@ -190,6 +191,12 @@
         margin: 2rem 0;
       }
 
+    }
+
+    .gallery-block {
+      -moz-column-count: 3;
+      -webkit-column-count: 3;
+      column-count: 3;
     }
 
   }
