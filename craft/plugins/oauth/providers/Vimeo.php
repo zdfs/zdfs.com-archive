@@ -8,6 +8,7 @@
 namespace Dukt\OAuth\Providers;
 
 use Craft\UrlHelper;
+use Craft\Oauth_ResourceOwnerModel;
 
 class Vimeo extends BaseProvider
 {
@@ -23,7 +24,6 @@ class Vimeo extends BaseProvider
     {
         return 'Vimeo';
     }
-
 
     /**
      * Get Icon URL
@@ -52,15 +52,13 @@ class Vimeo extends BaseProvider
      */
     public function createProvider()
     {
-        require_once(CRAFT_PLUGINS_PATH.'oauth/src/OAuth2/Client/Provider/Vimeo.php');
-
         $config = [
             'clientId' => $this->providerInfos->clientId,
             'clientSecret' => $this->providerInfos->clientSecret,
             'redirectUri' => $this->getRedirectUri(),
         ];
 
-        return new \Dukt\OAuth\OAuth2\Client\Provider\Vimeo($config);
+        return new \Dukt\OAuth2\Client\Provider\Vimeo($config);
     }
 
     /**

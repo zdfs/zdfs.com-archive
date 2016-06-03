@@ -7,6 +7,7 @@
 
 namespace Dukt\OAuth\Providers;
 
+use Craft\Oauth_ResourceOwnerModel;
 use Craft\OauthPlugin;
 use Craft\IOauth_Provider;
 use Craft\OauthHelper;
@@ -82,19 +83,26 @@ abstract class BaseProvider implements IOauth_Provider {
         {
             OauthPlugin::log('OAuth 2 Connect - Step 1', LogLevel::Info);
 
-            $oauthProvider->setScopes($options['scope']);
+            // $oauthProvider->setScopes($options['scope']);
 
             $authorizationOptions = $options['authorizationOptions'];
 
-            if(!empty($options['authorizationOptions']['access_type']) && $options['authorizationOptions']['access_type'] == 'offline')
+            if(count($options['scope']) > 0)
             {
-                unset($options['authorizationOptions']['access_type']);
-                $oauthProvider->setAccessType('offline');
+                $authorizationOptions['scope'] = $options['scope'];
             }
+//
+//            if(!empty($options['authorizationOptions']['access_type']) && $options['authorizationOptions']['access_type'] == 'offline')
+//            {
+//                unset($options['authorizationOptions']['access_type']);
+//                $oauthProvider->setAccessType('offline');
+//            }
 
             $authorizationUrl = $oauthProvider->getAuthorizationUrl($authorizationOptions);
 
-            \Craft\craft()->httpSession->add('oauth2state', $oauthProvider->state);
+            $state = $oauthProvider->getState();
+
+            \Craft\craft()->httpSession->add('oauth2state', $state);
 
             OauthPlugin::log('OAuth 2 Connect - Step 1 - Data'."\r\n".print_r([
                 'authorizationUrl' => $authorizationUrl,
@@ -279,19 +287,90 @@ abstract class BaseProvider implements IOauth_Provider {
     }
 
     /**
-     * Get Account
+     * Returns the remote resource owner.
+     *
+     * @param $token
+     *
+     * @return mixed
      */
-    public function getAccount($token)
+    public function getRemoteResourceOwner($token)
     {
         $provider = $this->getProvider();
 
         $realToken = OauthHelper::getRealToken($token);
 
-        $response = $provider->getUserDetails($realToken);
-
-        return $response->getArrayCopy();
+        switch($this->getOauthVersion())
+        {
+            case 1:
+                return $provider->getUserDetails($realToken);
+                break;
+            case 2:
+                return $provider->getResourceOwner($realToken);
+                break;
+        }
     }
 
+    /**
+     * Returns the resource owner.
+     *
+     * @param $token
+     *
+     * @return Oauth_ResourceOwnerModel
+     */
+    public function getResourceOwner($token)
+    {
+        $remoteResourceOwner = $this->getRemoteResourceOwner($token);
+
+        $resourceOwner = new Oauth_ResourceOwnerModel;
+        $resourceOwner->remoteId = $remoteResourceOwner->getId();
+
+        // email
+        if(method_exists($remoteResourceOwner, 'getEmail'))
+        {
+            $resourceOwner->email = $remoteResourceOwner->getEmail();
+        }
+
+        // name
+        if(method_exists($remoteResourceOwner, 'getName'))
+        {
+            $resourceOwner->name = $remoteResourceOwner->getName();
+        }
+        elseif(method_exists($remoteResourceOwner, 'getFirstName') && method_exists($remoteResourceOwner, 'getLastName'))
+        {
+            $resourceOwner->name = trim($remoteResourceOwner->getFirstName()." ".$remoteResourceOwner->getLastName());
+        }
+        elseif(method_exists($remoteResourceOwner, 'getFirstName'))
+        {
+            $resourceOwner->name = $remoteResourceOwner->getFirstName();
+        }
+        elseif(method_exists($remoteResourceOwner, 'getLasttName'))
+        {
+            $resourceOwner->name = $remoteResourceOwner->getLasttName();
+        }
+
+        return $resourceOwner;
+    }
+
+    /**
+     * Alias for getResourceOwner()
+     *
+     * @param $token
+     *
+     * @return Oauth_ResourceOwnerModel
+     */
+    public function getAccount($token)
+    {
+        return $this->getResourceOwner($token);
+    }
+
+    /**
+     * Fetch provider data
+     *
+     * @param       $url
+     * @param array $headers
+     *
+     * @return mixed
+     */
     protected function fetchProviderData($url, array $headers = [])
     {
         $client = $this->getProvider()->getHttpClient();
@@ -308,15 +387,10 @@ abstract class BaseProvider implements IOauth_Provider {
         return $response;
     }
 
-    public function getUserDetails()
-    {
-        $token = OauthHelper::getRealToken($this->token);
-
-        return $this->getProvider()->getUserDetails($token);
-    }
-
     /**
-     * Get Redirect URI
+     * Returns the redirect URI
+     *
+     * @return array|string
      */
     public function getRedirectUri()
     {
@@ -324,7 +398,9 @@ abstract class BaseProvider implements IOauth_Provider {
     }
 
     /**
-     * Get Handle
+     * Returns the provider handle based on its class name.
+     *
+     * @return string
      */
     public function getHandle()
     {
@@ -340,6 +416,8 @@ abstract class BaseProvider implements IOauth_Provider {
      *
      * from : Dukt\OAuth\Providers\Dribbble
      * to : Dribbble
+     *
+     * @return string
      */
     public function getClass()
     {
@@ -351,7 +429,9 @@ abstract class BaseProvider implements IOauth_Provider {
     }
 
     /**
-     * Get Tokens
+     * Get provider's tokens
+     *
+     * @return array
      */
     public function getTokens()
     {

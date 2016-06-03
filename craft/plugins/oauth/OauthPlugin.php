@@ -7,20 +7,19 @@
 
 namespace Craft;
 
-require_once(CRAFT_PLUGINS_PATH.'oauth/vendor/autoload.php');
-
 class OauthPlugin extends BasePlugin
 {
     // Public Methods
     // =========================================================================
 
-	public function init()
-	{
-		require_once(CRAFT_PLUGINS_PATH.'oauth/etc/providers/IOauth_Provider.php');
-		require_once(CRAFT_PLUGINS_PATH.'oauth/providers/BaseProvider.php');
-
-		parent::init();
-	}
+    public function init()
+    {
+        require_once(CRAFT_PLUGINS_PATH.'oauth/vendor/autoload.php');
+        require_once(CRAFT_PLUGINS_PATH.'oauth/etc/providers/IOauth_Provider.php');
+        require_once(CRAFT_PLUGINS_PATH.'oauth/providers/BaseProvider.php');
+        
+        parent::init();
+    }
     /**
      * Get OAuth Providers
      */
@@ -47,22 +46,21 @@ class OauthPlugin extends BasePlugin
         return Craft::t('OAuth');
     }
 
-	/**
-	 * Get Version
-	 */
-	public function getVersion()
-	{
-		$path = CRAFT_PLUGINS_PATH.'oauth/Info.php';
-
-		if(IOHelper::fileExists($path))
-		{
-			require_once($path);
-
-			return OAUTH_VERSION;
-		}
-
-		return '1.0.0';
-	}
+    /**
+     * Get Description
+     */
+    public function getDescription()
+    {
+        return Craft::t('Consume OAuth-based web services.');
+    }
+    
+    /**
+     * Get Version
+     */
+    public function getVersion()
+    {
+        return '2.0.0';
+    }
 
     /**
      * Get Schema Version
