@@ -4,8 +4,7 @@
 
 	var myElement = document.querySelector('[data-headroom]');
 	var headroom  = new Headroom(myElement, {
-		scroller: document.querySelector('.off-canvas-wrapper'),
-		tolerance: 40
+		tolerance: 15
 	});
 
 	headroom.init();

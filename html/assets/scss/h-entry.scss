@@ -19,7 +19,8 @@
 
   .h-entry {
 
-    padding-top: 4.75rem;
+    margin-bottom: 2rem;
+		padding-top: 4.75rem;
 
     h2 {
       text-align: center;
@@ -191,8 +192,6 @@
 @include breakpoint(large up) {
 
   .h-entry {
-
-    max-width: $hentry-width;
 
     .text-block {
       margin: 0 auto;

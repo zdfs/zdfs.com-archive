@@ -12,8 +12,6 @@
 @import '../../../node_modules/foundation-sites/scss/grid/flex-grid';
 @import '../../../node_modules/foundation-sites/scss/components/flex';
 @import '../../../node_modules/foundation-sites/scss/components/top-bar';
-@import '../../../node_modules/foundation-sites/scss/components/title-bar';
-@import '../../../node_modules/foundation-sites/scss/components/off-canvas';
 @import '../../../node_modules/foundation-sites/scss/components/menu';
 @import '../../../node_modules/foundation-sites/scss/components/menu-icon';
 @import '../../../node_modules/foundation-sites/scss/components/close-button';
@@ -22,7 +20,6 @@
 @import '../../../node_modules/motion-ui/motion-ui';
 
 // Overrides
-@import 'overrides/off_canvas_override';
 @import 'overrides/typography_override';
 @import 'overrides/top_bar_override';
 
@@ -34,8 +31,6 @@
 @include foundation-flex-classes;
 @include foundation-flex-grid;
 @include foundation-top-bar;
-@include foundation-title-bar;
-@include foundation-off-canvas;
 @include foundation-menu;
 @include foundation-menu-icon;
 @include foundation-close-button;
@@ -45,6 +40,5 @@
 @include motion-ui-animations;
 
 // Call Overrides
-@include off-canvas-override;
 @include typography-override;
 @include top-bar-override;

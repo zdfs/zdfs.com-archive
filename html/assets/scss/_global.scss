@@ -250,7 +250,6 @@ $foundation-colors: (
   figure,
   footer,
   header,
-  hgroup,
   main,
   menu,
   nav,
@@ -638,18 +637,21 @@ $foundation-colors: (
   }
 }
 
-.no-js body {
+.no-js .primary-nav,
+.no-js #content {
   opacity: 0;
 }
 
-.wf-loading body {
+.wf-loading .primary-nav,
+.wf-loading #content {
   opacity: 0;
   transform: translateY(-20px);
   -ms-transform: translateY(-20px);
   -webkit-transform: translateY(-20px);
 }
 
-body {
+.primary-nav,
+#content {
   opacity: 1;
   transform: translateY(0);
   -ms-transform: translateY(0);

@@ -22,29 +22,21 @@
 {% block stylesheets %}{% endblock %}
 </head>
 <body>
-  <div class="off-canvas-wrapper">
-    <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
-      <div class="off-canvas position-left" data-off-canvas>
-        <ul class="vertical menu">
-        </ul>
-      </div>
-      <main id="content" role="main" class="off-canvas-content" data-off-canvas-content>
-        <nav class="top-bar" data-headroom>
-          <ul class="menu primary-nav">
-            <li><a>Write</a></li>
-            <li><a>Code</a></li>
-            <li><a href="/" class="logo">zdfs</a></li>
-            <li><a>Capture</a></li>
-            <li><a>About</a></li>
-          </ul>
-        </nav>
+	<nav class="top-bar" data-headroom>
+		<ul class="menu primary-nav">
+			<li><a>Write</a></li>
+			<li><a>Code</a></li>
+			<li><a href="/" class="logo">zdfs</a></li>
+			<li><a>Capture</a></li>
+			<li><a>About</a></li>
+		</ul>
+	</nav>
+  <main id="content" role="main">
 {% block content %}
-          <p>If you see me, you haven’t set your <code>{% verbatim %}{% block content %}…{% endblock %}{% endverbatim %}</code> yet.</p>
-          <p>See Twig’s <a href="http://twig.sensiolabs.org/doc/templates.html#template-inheritance">Template Inheritance</a> documentation for an explanation.</p>
+      <p>If you see me, you haven’t set your <code>{% verbatim %}{% block content %}…{% endblock %}{% endverbatim %}</code> yet.</p>
+      <p>See Twig’s <a href="http://twig.sensiolabs.org/doc/templates.html#template-inheritance">Template Inheritance</a> documentation for an explanation.</p>
 {% endblock %}
-      </main>
-    </div>
-  </div>
+  </main>
   {% includeJsFile "/scripts/min/common.js" %}
 {% block scripts %}{% endblock %}
 </body>

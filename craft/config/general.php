@@ -26,7 +26,7 @@ return array(
 
 	'zdfs.dev' => array(
 		'environmentVariables' => array(
-			'basePath' => '/Users/zdfs/Hubs/zdfs.com/html/images',
+			'basePath' => '/Users/zach.forrest/Hubs/zdfs.com/html/images',
 			'baseUrl' => 'https://zdfs.dev/images'
 		)
 	)

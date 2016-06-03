@@ -61,16 +61,4 @@
 
   }
 
-  @include breakpoint(large up) {
-
-    .top-bar {
-
-      width: -webkit-calc(100% - 300px);
-      width: calc(100% - 300px);
-      max-width: $hentry-width;
-
-    }
-
-  }
-
 }

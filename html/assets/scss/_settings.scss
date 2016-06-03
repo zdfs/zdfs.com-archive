@@ -45,7 +45,7 @@
 // ---------
 
 $global-font-size: 100%;
-$global-width: 100%;
+$global-width: rem-calc(1280);
 $global-lineheight: 1.5;
 $foundation-palette: (
   primary: #ef5350,
