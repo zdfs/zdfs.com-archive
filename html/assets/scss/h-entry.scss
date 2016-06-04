@@ -1,9 +1,13 @@
 @import 'settings';
 @import '../../../node_modules/foundation-sites/scss/components/float';
+@import '../../../node_modules/foundation-sites/scss/components/pagination';
+@import '../../../node_modules/foundation-sites/scss/components/visibility';
 
 @include breakpoint(small up) {
 
   @include foundation-float-classes;
+  @include foundation-pagination;
+  @include foundation-visibility-classes;
 
   .no-js {
 
@@ -20,7 +24,10 @@
   .h-entry {
 
     margin-bottom: 2rem;
-    padding-top: 4.75rem;
+
+    &:first-child {
+      padding-top: 4.75rem;
+    }
 
     h2 {
       text-align: center;

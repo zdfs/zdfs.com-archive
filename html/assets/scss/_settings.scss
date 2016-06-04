@@ -44,6 +44,10 @@
 // 1. Global
 // ---------
 
+$global-text-direction: ltr !default;
+$global-left: if($global-text-direction == rtl, right, left);
+$global-right: if($global-text-direction == rtl, left, right);
+
 $global-font-size: 100%;
 $global-width: 64rem;
 $global-lineheight: 1.5;
