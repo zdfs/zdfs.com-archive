@@ -1,0 +1,94 @@
+{% extends "_layout" %}
+
+{% block stylesheets %}
+  <link rel="stylesheet" href="/styles/min/h-entry.css"/>
+{% endblock %}
+
+{% set entryCount = 10 %}
+{% set offsetCount = 2 %}
+{% set params = craft.request.getSegments() %}
+
+{% block content %}
+
+  <div class="row align-center">
+    <div class="columns small-12 medium-10">
+
+      {% set writeItems = craft.entries.section('code') %}
+
+      {% paginate writeItems.limit(entryCount) as pageEntries %}
+
+      {% for entry in pageEntries %}
+
+        <article class="h-entry">
+
+          <div class="article-content text-center">
+            <h4><a href="{{ entry.url }}">{{ entry.title }}</a></h4>
+            <time datetime="{{ entry.postDate }}">{{ entry.postDate.format('M d, Y') }}</time>
+          </div>
+        </article>
+
+      {% endfor %}
+
+      {% if paginate.total > entryCount %}
+        <ul class="pagination text-center" role="navigation" aria-label="Pagination">
+          <li class="pagination-previous{% if paginate.prevUrl == '' %} disabled{% endif %}">
+            {% if paginate.prevUrl != '' %}
+            <a href="{{ paginate.prevUrl }}" aria-label="Previous page">
+              {% endif %}
+              Previous <span class="show-for-sr">page</span>
+              {% if paginate.prevUrl != '' %}
+            </a>
+            {% endif %}
+          </li>
+
+          {% if paginate.currentPage != 1 and paginate.getPrevUrls() | length > offsetCount %}
+            <li>
+              <a href="{{ paginate.firstUrl }}" aria-label="Page 1">1</a>
+            </li>
+          {% endif %}
+
+          {% if paginate.currentPage - paginate.getPrevUrls(offsetCount) | length >= offsetCount and paginate.getPrevUrls() | length > offsetCount + 1 %}
+            <li class="ellipsis" aria-hidden="true"></li>
+          {% endif %}
+
+          {% for page, url in paginate.getPrevUrls(offsetCount) %}
+            <li>
+              <a href="{{ url }}" aria-label="Page {{ page }}">{{ page }}</a>
+            </li>
+          {% endfor %}
+
+          <li {% if paginate.currentPage == craft.request.pageNum %}class="current"{% endif %}><span
+              class="show-for-sr">You're on page</span> {{ paginate.currentPage }}</li>
+
+          {% for page, url in paginate.getNextUrls(offsetCount) %}
+            <li>
+              <a href="{{ url }}" aria-label="Page {{ page }}">{{ page }}</a>
+            </li>
+          {% endfor %}
+
+          {% if paginate.getNextUrls(offsetCount) | length + paginate.currentPage < paginate.total and paginate.getNextUrls() | length > offsetCount + 1 %}
+            <li class="ellipsis" aria-hidden="true"></li>
+          {% endif %}
+
+          {% if paginate.currentPage != paginate.total and paginate.getNextUrls() | length > offsetCount %}
+            <li>
+              <a href="{{ paginate.lastUrl }}" aria-label="Page {{ paginate.totalPages }}">{{ paginate.totalPages }}</a>
+            </li>
+          {% endif %}
+
+          <li class="pagination-next{% if paginate.nextUrl == '' %} disabled{% endif %}">
+            {% if paginate.nextUrl != '' %}
+            <a href="{{ paginate.nextUrl }}" aria-label="Next page">
+              {% endif %}
+              Next <span class="show-for-sr">page</span>
+              {% if paginate.nextUrl != '' %}
+            </a>
+            {% endif %}
+          </li>
+        </ul>
+      {% endif %}
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -19,8 +19,17 @@
 {% extends "_layout" %}
 {% set title = "404" %}
 
-{% block content %}
-	<h1>Page not found</h1>
+{% block stylesheets %}
+  <link rel="stylesheet" href="/styles/min/h-entry.css"/>
+{% endblock %}
 
-	<p>What’s worse, a hilarious 404 page can’t be found either.</p>
+{% block content %}
+<div class="row align-center">
+  <div class="columns small-12 medium-10">
+    <div class="h-entry">
+      <h1>Page not found</h1>
+      <p>What’s worse, a hilarious 404 page can’t be found either.</p>
+    </div>
+  </div>
+</div>
 {% endblock %}
