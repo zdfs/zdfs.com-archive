@@ -22,7 +22,6 @@
 // Overrides
 @import 'overrides/typography_override';
 @import 'overrides/top_bar_override';
-@import 'overrides/grid_override';
 
 // Import plugins
 @import 'lightgallery/lightgallery';
@@ -43,4 +42,3 @@
 // Call Overrides
 @include typography-override;
 @include top-bar-override;
-@include grid-override;
