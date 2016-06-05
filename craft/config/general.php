@@ -16,11 +16,11 @@ return array(
 		'maxUploadFileSize' => 33554432
 	),
 	
-	'45.55.10.201' => array(
-		'siteUrl' => 'http://45.55.10.201',
+	'zdfs.com' => array(
+		'siteUrl' => 'zdfs.com',
 		'environmentVariables' => array(
 			'basePath' => '/var/www/html/images',
-			'baseUrl' => 'http://45.55.10.201/images'
+			'baseUrl' => 'http://zdfs.com/images'
 		)
 	),
 
