@@ -19,15 +19,21 @@
 
 {% extends "_layout" %}
 
+{% block stylesheets %}
+	<link rel="stylesheet" href="/styles/min/h-entry.css"/>
+{% endblock %}
+
 {% block content %}
-	<h1>{{ entry.title }}</h1>
 
-	{{ entry.body }}
+	<div class="row align-center">
+		<div class="columns small-12 medium-10">
 
-	<h2>Recent News</h2>
-	<ul>
-		{% for entry in craft.entries.section('news').limit(5).find() %}
-			<li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
-		{% endfor %}
-	</ul>
+			<div class="h-entry">
+				<p>Please forgive the mess. I'm moving off of Squarespace and things will be a mess for a bit. Most of
+				my content is here, so just use the links above.</p>
+			</div>
+
+		</div>
+	</div>
+
 {% endblock %}
