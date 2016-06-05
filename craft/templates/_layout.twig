@@ -13,7 +13,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title>
+  <title>{{ siteName }}{% if title is defined %}/{{ title }}{% endif %}</title>
   <link rel="home" href="{{ siteUrl }}"/>
   <link rel="stylesheet" href="/styles/min/layout.css" />
   <noscript>

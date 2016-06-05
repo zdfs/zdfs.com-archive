@@ -10,6 +10,7 @@
 {% set params = craft.entries.section('write') %}
 {% set prevEntry = entry.getPrev(params) %}
 {% set nextEntry = entry.getNext(params) %}
+{% set title = entry.title %}
 
 {% block content %}
   <article class="h-entry">
