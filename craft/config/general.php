@@ -16,6 +16,13 @@ return array(
 		'maxUploadFileSize' => 33554432
 	),
 
+	'zdfs.com' => array(
+		'environmentVariables' => array(
+			'basePath' => '/var/www/html/images',
+			'baseUrl' => 'http://zdfs.com/images'
+		)
+	),
+
 	'zdfs.dev' => array(
 		'environmentVariables' => array(
 			'basePath' => '/Users/zach.forrest/Hubs/zdfs.com/html/images',
