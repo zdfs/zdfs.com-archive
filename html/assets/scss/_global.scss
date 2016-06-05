@@ -640,6 +640,7 @@ $foundation-colors: (
 html,
 body {
   overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
 }
 
 .no-js .primary-nav,
