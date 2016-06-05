@@ -15,14 +15,6 @@ return array(
 		'generateTransformsBeforePageLoad' => true,
 		'maxUploadFileSize' => 33554432
 	),
-	
-	'zdfs.com' => array(
-		'siteUrl' => 'zdfs.com',
-		'environmentVariables' => array(
-			'basePath' => '/var/www/html/images',
-			'baseUrl' => 'http://zdfs.com/images'
-		)
-	),
 
 	'zdfs.dev' => array(
 		'environmentVariables' => array(
