@@ -637,6 +637,10 @@ $foundation-colors: (
   }
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .no-js .primary-nav,
 .no-js #content {
   opacity: 0;
