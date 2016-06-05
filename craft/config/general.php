@@ -19,7 +19,7 @@ return array(
 	'zdfs.com' => array(
 		'environmentVariables' => array(
 			'basePath' => '/var/www/html/images',
-			'baseUrl' => 'http://zdfs.com/images'
+			'baseUrl' => 'https://zdfs.com/images'
 		)
 	),
 
