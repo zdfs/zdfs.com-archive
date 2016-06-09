@@ -15,9 +15,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ siteName }}{% if title is defined %}/{{ title }}{% endif %}</title>
   <link rel="home" href="{{ siteUrl }}"/>
-  <link rel="stylesheet" href="/styles/min/layout.css" />
+  <style>{{ source('styles/min/layout.css') }}</style>
   <noscript>
-    <link rel="stylesheet" href="/styles/min/no-js.css" />
+    <style>{{ source('styles/min/no-js.css') }}</style>
   </noscript>
 {% block stylesheets %}{% endblock %}
 </head>
