@@ -25,6 +25,8 @@
 
 {% block content %}
 
+	{% cache %}
+
   <div class="row align-center">
     <div class="columns small-12 medium-10">
 
@@ -35,5 +37,7 @@
 
     </div>
   </div>
+
+	{% endcache %}
 
 {% endblock %}
