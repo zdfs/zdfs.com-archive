@@ -1,3 +1,4 @@
+{% cache %}
 {% for block in blocks %}
 	{% switch block.type %}
 		{% case 'youTube' %}
@@ -20,3 +21,4 @@
       } %}
 	{% endswitch %}
 {% endfor %}
+{% endcache %}
