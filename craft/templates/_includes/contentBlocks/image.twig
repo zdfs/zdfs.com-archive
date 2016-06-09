@@ -1,19 +1,21 @@
 {% import '_macros/responsiveImages' as resImg %}
 
-{% set caption = caption is defined ? caption : null %}
-{% set articleImage = resImg.responsive(image.first()) %}
+{% cache %}
+	{% set caption = caption is defined ? caption : null %}
+	{% set articleImage = resImg.responsive(image.first()) %}
 
-<div class="image-block align-center">
-  {% if linkSource %}
-  <a href="{{ linkSource }}" target="_blank">
-  {% endif %}
-  <figure>
-    {{ articleImage }}
-    {% if caption %}
-      <figcaption>{{ caption }}</figcaption>
-    {% endif %}
-  </figure>
-  {% if linkSource %}
-  </a>
-  {% endif %}
-</div>
+	<div class="image-block align-center">
+	  {% if linkSource %}
+	  <a href="{{ linkSource }}" target="_blank">
+	  {% endif %}
+	  <figure>
+	    {{ articleImage }}
+	    {% if caption %}
+	      <figcaption>{{ caption }}</figcaption>
+	    {% endif %}
+	  </figure>
+	  {% if linkSource %}
+	  </a>
+	  {% endif %}
+	</div>
+{% endcache %}

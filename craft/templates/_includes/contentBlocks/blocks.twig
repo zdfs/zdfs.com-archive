@@ -1,24 +1,24 @@
 {% cache %}
-{% for block in blocks %}
-	{% switch block.type %}
-		{% case 'youTube' %}
-      {% include '_includes/contentBlocks/youTube.twig' with {
-        videoID: block.videoId
-      } %}
-		{% case 'text' %}
-			{% include '_includes/contentBlocks/text.twig' with {
-				text: block.textArea
-			} %}
-    {% case 'image' %}
-      {% include '_includes/contentBlocks/image.twig' with {
-        image: block.articleImage,
-        caption: block.articleImageCaption,
-        linkSource: block.articleImageLink
-      } %}
-    {% case 'gallery' %}
-      {% include '_includes/contentBlocks/gallery.twig' with {
-        images: block.images
-      } %}
-	{% endswitch %}
-{% endfor %}
+	{% for block in blocks %}
+		{% switch block.type %}
+			{% case 'youTube' %}
+	      {% include '_includes/contentBlocks/youTube.twig' with {
+	        videoID: block.videoId
+	      } %}
+			{% case 'text' %}
+				{% include '_includes/contentBlocks/text.twig' with {
+					text: block.textArea
+				} %}
+	    {% case 'image' %}
+	      {% include '_includes/contentBlocks/image.twig' with {
+	        image: block.articleImage,
+	        caption: block.articleImageCaption,
+	        linkSource: block.articleImageLink
+	      } %}
+	    {% case 'gallery' %}
+	      {% include '_includes/contentBlocks/gallery.twig' with {
+	        images: block.images
+	      } %}
+		{% endswitch %}
+	{% endfor %}
 {% endcache %}
