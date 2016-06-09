@@ -13,6 +13,7 @@
 {% set title = entry.title %}
 
 {% block content %}
+  {% cache %}
   <article class="h-entry">
     <div class="row collapse">
       <div class="columns small-12 entry-meta">
@@ -97,4 +98,5 @@
       </div>
     </div>
   </article>
+  {% endcache %}
 {% endblock %}
