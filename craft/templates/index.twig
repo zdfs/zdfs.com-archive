@@ -20,7 +20,8 @@
 {% extends "_layout" %}
 
 {% block stylesheets %}
-  <style>{{ source('styles/min/h-entry.css') }}</style>
+	<link rel="preload" href="/styles/min/h-entry.css" as="style" onload="this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="/styles/min/h-entry.css"></noscript>
 {% endblock %}
 
 {% block content %}

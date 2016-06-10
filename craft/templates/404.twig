@@ -20,7 +20,8 @@
 {% set title = "404" %}
 
 {% block stylesheets %}
-  <link rel="stylesheet" href="/styles/min/h-entry.css"/>
+	<link rel="preload" href="/styles/min/h-entry.css" as="style" onload="this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="/styles/min/h-entry.css"></noscript>
 {% endblock %}
 
 {% block content %}
