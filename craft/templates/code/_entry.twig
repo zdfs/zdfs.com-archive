@@ -1,20 +1,23 @@
 {% extends "_layout" %}
 
 {% block stylesheets %}
-  <style>{{ source('styles/min/h-entry.css') }}</style>
+	<link rel="preload" href="/styles/min/h-entry.css" as="style" onload="this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="/styles/min/h-entry.css"></noscript>
 {% endblock %}
 
-{% set urlparams = craft.request.getSegments() %}
-{% set writeItems = craft.entries.section('code') %}
-{% set entry = writeItems.slug(urlparams[4]).first() %}
-{% set params = craft.entries.section('code') %}
-{% set prevEntry = entry.getPrev(params) %}
-{% set nextEntry = entry.getNext(params) %}
-{% set title = entry.title %}
-
 {% block content %}
-  {% cache %}
-  <article class="h-entry">
+
+	{% cache %}
+
+		{% set urlparams = craft.request.getSegments() %}
+		{% set writeItems = craft.entries.section('code') %}
+		{% set entry = writeItems.slug(urlparams[4]).first() %}
+		{% set params = craft.entries.section('code') %}
+		{% set prevEntry = entry.getPrev(params) %}
+		{% set nextEntry = entry.getNext(params) %}
+		{% set title = entry.title %}
+
+	<article class="h-entry">
     <div class="row collapse">
       <div class="columns small-12 entry-meta">
         {% if entry.linkSource %}

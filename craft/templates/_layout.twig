@@ -1,37 +1,27 @@
-{#
- # Layout template
- # ---------------
- #
- # This template defines your site’s global layout. It can be
- # “extended” by other templates to fill in the gaps.
- #
- # See Twig’s Template Inheritance documentation for more details:
- # http://twig.sensiolabs.org/doc/templates.html#template-inheritance
- #}
 <!doctype html>
-<html class="no-js">
+<html class="no-js" lang="en-US">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ siteName }}{% if title is defined %}/{{ title }}{% endif %}</title>
-  <link rel="home" href="{{ siteUrl }}"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="author" content="Zachary Forrest y Salazar" />
+	<meta name="description" content="Zachary Forrest y Salazar is a UI engineer, photographer, cigar aficionado, martial artist, and most important, an amateur. He lives in Santa Barbara, California." />
+	<meta name="robots" content="index,follow" />
+	<meta name="revisit-after" content="14 days" />
+	<title>{{ siteName }}{% if title is defined %}/{{ title }}{% endif %}</title>
   <style>{{ source('styles/min/layout.css') }}</style>
-  <noscript>
+	<noscript>
     <style>{{ source('styles/min/no-js.css') }}</style>
   </noscript>
-{% block stylesheets %}{% endblock %}
+	{% block stylesheets %}{% endblock %}
 </head>
 <body>
 	{% include '_includes/common/header.twig' %}
-  <main id="content" role="main">
-{% block content %}
-      <p>If you see me, you haven’t set your <code>{% verbatim %}{% block content %}…{% endblock %}{% endverbatim %}</code> yet.</p>
-      <p>See Twig’s <a href="http://twig.sensiolabs.org/doc/templates.html#template-inheritance">Template Inheritance</a> documentation for an explanation.</p>
-{% endblock %}
+	<main id="content" role="main">
+		{% block content %}Something is fucked up.{% endblock %}
     {% include '_includes/common/footer.twig' %}
   </main>
-  {% includeJsFile "/scripts/min/common.js" %}
-  <script src="/mint/?js"></script>
-{% block scripts %}{% endblock %}
+	{% includeJsFile "/scripts/min/common.js" %}
+	{% includeJsFile "/mint/?js" %}
+	{% block scripts %}{% endblock %}
 </body>
 </html>

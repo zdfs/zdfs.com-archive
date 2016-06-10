@@ -1,12 +1,15 @@
 {% extends "_layout" %}
 
 {% block stylesheets %}
-  <style>{{ source('styles/min/h-entry.css') }}</style>
+	<link rel="preload" href="/styles/min/h-entry.css" as="style" onload="this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="/styles/min/h-entry.css"></noscript>
 {% endblock %}
 
 {% set title = "capture" %}
 
 {% block content %}
+
+	{% cache %}
 
   <div class="row align-center">
     <div class="columns small-12 medium-10">
@@ -17,5 +20,7 @@
 
     </div>
   </div>
+
+	{% endcache %}
 
 {% endblock %}

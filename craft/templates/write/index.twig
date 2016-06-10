@@ -1,17 +1,18 @@
 {% extends "_layout" %}
 
 {% block stylesheets %}
-  <style>{{ source('styles/min/h-entry.css') }}</style>
+	<link rel="preload" href="/styles/min/h-entry.css" as="style" onload="this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="/styles/min/h-entry.css"></noscript>
 {% endblock %}
-
-{% set title = "write" %}
-{% set entryCount = 10 %}
-{% set offsetCount = 2 %}
-{% set params = craft.request.getSegments() %}
 
 {% block content %}
 
   {% cache %}
+
+		{% set title = "write" %}
+		{% set entryCount = 10 %}
+		{% set offsetCount = 2 %}
+		{% set params = craft.request.getSegments() %}
 
   <div class="row align-center">
     <div class="columns small-12 medium-10">

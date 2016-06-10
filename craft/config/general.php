@@ -24,6 +24,7 @@ return array(
 	),
 
 	'zdfs.dev' => array(
+		'siteUrl' => 'https://zdfs.dev:8080',
 		'environmentVariables' => array(
 			'basePath' => '/Users/zach.forrest/Hubs/zdfs.com/html/images',
 			'baseUrl' => 'https://zdfs.dev/images'
