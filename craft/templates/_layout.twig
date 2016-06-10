@@ -20,8 +20,8 @@
 		{% block content %}Something is fucked up.{% endblock %}
     {% include '_includes/common/footer.twig' %}
   </main>
-	{% includeJsFile "/scripts/min/common.js" %}
-	{% includeJsFile "/mint/?js" %}
+	<script src="/scripts/min/common.js?t={{ date().timestamp }}"></script>
+	<script src="/mint/?js"></script>
 	{% block scripts %}{% endblock %}
 </body>
 </html>
