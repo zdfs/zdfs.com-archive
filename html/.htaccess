@@ -37,6 +37,8 @@
   ExpiresActive on
   ExpiresDefault                          "access plus 30 seconds"
 
+  AddType image/x-icon .ico
+
   ExpiresByType text/cache-manifest       "access plus 0 seconds"
   ExpiresByType text/html                 "access plus 10 minutes"
   ExpiresByType text/xml                  "access plus 0 seconds"
@@ -59,6 +61,9 @@
   ExpiresByType text/css                  "access plus 1 year"
   ExpiresByType application/javascript    "access plus 1 year"
   ExpiresByType text/javascript           "access plus 1 year"
+  ExpiresByType text/plain                "access plus 30 days"
+  ExpiresByType image/x-icon              "access plus 30 days"
+  ExpiresByType image/ico                 "access plus 30 days"
 
   <IfModule mod_headers.c>
     Header append Cache-Control "public"
